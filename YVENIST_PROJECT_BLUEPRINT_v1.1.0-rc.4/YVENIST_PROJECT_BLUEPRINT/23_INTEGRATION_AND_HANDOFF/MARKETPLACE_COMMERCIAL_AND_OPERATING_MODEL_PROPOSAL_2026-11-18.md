@@ -1,11 +1,11 @@
-# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.4
+# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.5
 
 **Data:** 2026-11-18  
-**Status:** PROPOSTA ESTRUTURADA / AGUARDANDO APROVAÇÃO CONJUNTA E REVISÃO ESPECIALIZADA  
+**Status:** COM-01 E COM-02 APROVADAS COMO REGRAS COMERCIAIS INTERNAS / DEMAIS POLÍTICAS PENDENTES DE APROVAÇÃO E REVISÃO ESPECIALIZADA  
 **Decisões de origem:** respostas conjuntas de Keven e Rafael registradas em 2026-11-18  
 **Documento relacionado:** `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md`
 
-> Este documento transforma as direções dos responsáveis em um modelo operacional recomendado. A comissão sugerida, as políticas de cancelamento, os prazos e os meios de pagamento abaixo ainda não são decisões aprovadas. Não devem ser publicados como termos finais nem implementados como política comercial definitiva antes da aprovação de ambos e das revisões jurídica, contábil e do provedor de pagamentos.
+> Este documento reúne decisões já aprovadas e propostas operacionais ainda em análise. COM-01 e COM-02 estão aprovadas como regras comerciais internas nas versões normativas referenciadas; os demais itens deste documento permanecem propostas até aprovação específica dos dois responsáveis e revisão jurídica, contábil e do PSP. Nenhum conteúdo deve ser publicado como termo final nem ativado em produção antes dessas validações.
 
 ## 1. Resumo executivo
 
@@ -47,6 +47,23 @@ Referências:
 
 O Yvenist pode aprender com transparência de taxas, regras específicas por tipo de serviço, incentivos de confiabilidade e tratamento documentado de exceções. Não deve adotar automaticamente a taxa de 16% ou a penalidade de 20% do Airbnb: são condições de outro produto, contrato e operação.
 
+### 2.3. Promoções, descontos e contribuição do fornecedor/plataforma
+
+A documentação pública de marketplaces mostra que campanhas podem ser financiadas pelo vendedor, pela plataforma ou em conjunto. O tratamento de taxa não é uniforme: varia conforme produto, campanha, contrato e país. Para o Yvenist, a principal lição é guardar a origem econômica de cada desconto e conferir sua compensação no valor devido ao fornecedor.
+
+- O TikTok Shop Brasil documenta campanhas cofinanciadas com proporção seller/plataforma, repasse da parcela da plataforma ao vendedor e detalhamento das parcelas promocionais no pedido.
+- O Mercado Livre diferencia campanhas do vendedor, campanhas cofinanciadas e promoções com bonificação do marketplace; também documenta cupons criados pelos vendedores.
+- A Amazon distingue descontos financiados pela própria Amazon, nos quais o seller recebe o preço cheio definido e a referral fee considera o preço definido, de promoções do vendedor cuja taxa segue o preço após a promoção.
+
+Esses exemplos são mecanismos de referência, não percentuais ou regras para copiar. A política específica do Yvenist está na COM-02.
+
+Referências oficiais:
+- https://seller-br.tiktok.com/university/essay?knowledge_id=2569565069149953&lang=en
+- https://developers.mercadolivre.com.br/pt_br/gerenciar-ofertas
+- https://developers.mercadolivre.com.br/pt_br/produto-consulta-de-usuarios/cupons-do-vendedor
+- https://sellercentral.amazon.com.br/help/hub/reference/external/G202170300
+- https://sellercentral.amazon.com.br/help/hub/reference/external/G202134700
+
 ## 3. Modelo de receita recomendado
 
 ### 3.1. Comissão por contratação
@@ -57,19 +74,41 @@ A taxa de 3% é uma condição de aquisição de oferta para a coorte inicial, n
 
 Exemplo ilustrativo para subpedido concluído de R$ 1.000,00: a 3%, comissão de R$ 30,00 e saldo de R$ 970,00; a 5%, R$ 50,00 e R$ 950,00; a 10%, R$ 100,00 e R$ 900,00. Valores antes de PSP, tributos, ajustes, reembolsos e custos atribuídos em contrato.
 
-A comissão é apurada por fornecedor. Um evento com quatro fornecedores terá quatro bases e quatro apurações independentes, não uma comissão indistinta sobre todo o evento. A política detalhada está em `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`.
+A comissão é apurada por fornecedor. Um evento com quatro fornecedores terá quatro bases e quatro apurações independentes, não uma comissão indistinta sobre todo o evento. A política detalhada de taxa e programa fundador está em `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`; a base de cálculo e o tratamento promocional aprovados estão em `COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`.
 
-### 3.2. Base de cálculo recomendada
+## 3.2. Base de cálculo aprovada — COM-02 v1.0
 
-Criar uma definição técnica chamada `commissionable_amount`, calculada a partir das linhas do subpedido:
+A COM-02 foi aprovada conjuntamente por Keven e Rafael como regra comercial interna. Sua fonte normativa é `COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`.
 
-- incluir preço dos itens/serviços e adicionais efetivamente contratados e concluídos;
-- considerar descontos financiados pelo próprio fornecedor na base líquida após o desconto;
-- excluir itens cancelados e valores efetivamente reembolsados;
-- tratar separadamente frete, deslocamento, montagem, tributos, gorjetas, descontos financiados pelo Yvenist e valores de terceiros;
-- não presumir que tributos ou despesas acessórias podem ser excluídos da base sem validação contábil e jurídica.
+**Regra principal:** a comissão é calculada por fornecedor/subpedido sobre a remuneração que o fornecedor tem direito a receber pela parte efetivamente concluída, antes da comissão Yvenist e dos custos de processamento do PSP, separando somente repasses genuínos e comprovados a terceiros independentes.
 
-A definição final deve refletir quem vende, quem emite documento fiscal, quem recebe o pagamento e como o contrato descreve a comissão. Registrar essa base no contrato do fornecedor e na configuração de cada versão da política.
+Consequências operacionais:
+- desconto assumido pelo fornecedor reduz a base;
+- desconto financiado pela plataforma só preserva a base na parcela efetivamente compensada/creditada ao fornecedor;
+- promoção cofinanciada é decomposta por parcela de cada financiador; não presumir proporção 50/50;
+- a etiqueta da campanha não é prova suficiente: conferir a obrigação e a liquidação efetivas do fornecedor;
+- entrega, montagem, instalação, deslocamento e adicionais próprios do fornecedor integram sua remuneração quando contratados;
+- repasse a terceiro independente só fica fora da base se for separado, comprovado, sem margem e descrito no contrato;
+- tributos não são automaticamente excluídos da base comercial; o tratamento específico exige validação contábil/jurídica;
+- taxa PSP não reduz automaticamente a base e permanece separada, aguardando decisão COM-03.
+
+O mesmo princípio vale para Party Maker e compra imediata. No Party Maker a apuração é isolada por `SupplierSubOrder`; desconto de um fornecedor não é transferido a outro. Desconto fixo de carrinho deve ser alocado às linhas elegíveis dentro do subpedido por regra determinística, recomendando-se rateio proporcional ao valor elegível antes do desconto.
+
+**Exemplos didáticos a 3%:**
+- R$ 1.000 sem promoção: base R$ 1.000; comissão R$ 30.
+- R$ 1.000 com cupom de R$ 100 financiado pelo fornecedor: base R$ 900; comissão R$ 27.
+- R$ 1.000 com cupom de R$ 100 custeado pelo Yvenist e integralmente compensado ao fornecedor: base R$ 1.000; comissão R$ 30.
+- R$ 1.000 com cupom de R$ 100 cofinanciado em 50% por cada parte: base R$ 950; comissão R$ 28,50.
+
+Valores ilustrativos, antes de PSP, tributos e ajustes. O líquido final não é igual à base nem deve ser prometido antes da conciliação.
+
+### 3.2.1. Snapshot e rastreabilidade promocional
+
+Cada promoção precisa registrar financiador, valor total, parcela do fornecedor, parcela da plataforma/parceiro, linhas elegíveis, critérios de acumulação, vigência, aceite e evidência de compensação. Cada linha do subpedido conserva sua alocação de desconto e sua remuneração concluída. O cálculo de comissão guarda versão da política, taxa, base, memória de cálculo, referências de pagamento/promoção e conclusão.
+
+O sistema deve usar centavos inteiros para BRL, congelar o snapshot no aceite e criar ajustes/reversões auditáveis em vez de sobrescrever cálculos anteriores. A tela do fornecedor deve discriminar desconto do fornecedor, subsídio da plataforma, base comissionável, comissão, custo PSP separado e líquido estimado.
+
+A COM-02 não resolve a política completa de cancelamento/reembolso (COM-04), nem a alocação da taxa PSP (COM-03).
 
 ### 3.3. Quando a comissão é gerada
 
@@ -94,10 +133,10 @@ Proposta inicial:
 
 A política definitiva precisa ser aprovada pelos dois responsáveis. A ordem de cálculo pode variar conforme o contrato e a implementação do PSP. Por exemplo, a documentação do Mercado Pago informa que, no split 1:1 documentado, a taxa do Mercado Pago é descontada antes da comissão do marketplace. Não codificar uma fórmula universal sem validar o PSP escolhido.
 
-### 3.5. Regras para reembolso e comissão
+### 3.5. Regras para reembolso e comissão — dependência da COM-04
 
 - Cancelamento integral antes de qualquer prestação: comissão adquirida igual a zero; reverter valores ainda não adquiridos.
-- Reembolso parcial: recalcular a comissão sobre a parcela efetivamente mantida e concluída.
+- Reembolso parcial: o efeito econômico sobre a base segue o valor efetivamente revertido na remuneração do fornecedor, conforme a COM-02. Percentuais, prazos, responsabilidades e procedimento completo de reembolso parcial continuam pendentes de decisão específica na COM-04 e revisão especializada.
 - Serviço parcialmente executado: somente a parte considerada concluída segundo critérios previamente contratados pode gerar comissão; casos disputados ficam pendentes.
 - Chargeback: manter registro separado e não mascarar perda como cancelamento comum.
 - Descontos promocionais: identificar quem financiou o desconto e como ele afeta a base.
