@@ -5,12 +5,12 @@
 
 ## Finalidade
 
-Área de assets: icons 2d. Guardar somente materiais com origem, licença, versão e contexto de uso registrados.
+Explorações de ícones ilustrativos 2D e assets de marca. Os ícones funcionais do produto continuam usando o mapeamento Material Icons aprovado; não substituir essa família por ilustrações sem nova decisão dos responsáveis.
 
-## Documentos previstos
+## Governação de assets
 
-- Consultar a árvore oficial em `BLUEPRINT_ARCHITECTURE.md`; documentos serão adicionados progressivamente.
-
-## Regra de criação
-
-Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, documento proprietário, fontes/entradas, responsável, dependências, status, critérios de aceite e documentos relacionados. Atualizar `BLUEPRINT_PROGRESS.md` e `BLUEPRINT_CHANGELOG.md` ao concluir mudanças relevantes.
+- Manter fonte vetorial editável e exportações separadas.
+- Registrar origem, licença, autoria, versão e contexto de uso.
+- Conferir legibilidade em tamanhos pequenos, contraste e estados desabilitado/selecionado.
+- Somente exportações aprovadas devem ser adicionadas aos assets do app.
+- Seguir `23_INTEGRATION_AND_HANDOFF/VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md`.
