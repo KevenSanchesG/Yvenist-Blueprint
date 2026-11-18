@@ -61,7 +61,7 @@ Continue Phase 2 by closing the joint commercial approval sheet, validating the 
 - Expanded the commercial/operating model proposal to v0.2 with commission calculation, sponsored placements, future subscription, supplier onboarding, multi-supplier request, payment/split, settlement, contracts, cancellations, no-shows, disputes and legal/accounting/PSP gates.
 - Added `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` with aggregate boundaries, state machines, event names, financial invariants and Claude Code acceptance criteria.
 - Added `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` so Keven and Rafael can decide remaining commercial parameters together.
-- COM-01 refined into a formal hybrid launch proposal submitted by Keven: 3% Founding Partner launch rate, 5% expansion rate and 10% maturity target; supplier-paid per completed sub-order. Awaiting Rafael's joint approval; thresholds and transition criteria remain open.
+- COM-01 is now recorded as jointly approved working business policy: 3% Founding Partner rate for 12 months after the first completed order; transition to 5% only after category/area expansion gate; 10% only after maturity gate and joint review. Notice/acceptance safeguards and local cohort rules are documented below.
 - `main` now contains the previously prepared 27-commit phase-1 work; this update continues directly on `main`.
 
 
