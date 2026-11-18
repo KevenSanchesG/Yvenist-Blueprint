@@ -30,3 +30,10 @@ Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, 
 - `CUSTOMER_FLOWS_AND_PARTY_MAKER_RULES_2026-11-18.md` — Party Maker, subpedidos por fornecedor e compra imediata.
 - `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` — proposta de comissão e regras comerciais/operacionais (ainda não aprovada).
 - `VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md` — ferramentas, pipeline de ilustração/animação e gate de qualidade.
+
+
+## Active commercial and transaction specifications
+
+- `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` — expanded commercial model and operating rules proposal v0.2.
+- `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — order, contract, payment, commission, payout, refund and dispute lifecycle.
+- `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint decisions still required before production policy.
