@@ -322,3 +322,82 @@ Claude não deve começar a construir checkout final apenas com base nas telas. 
 - fluxo completo no sandbox antes de habilitar produção.
 
 Este documento é modelo proposto. A aprovação comercial e o parecer especializado devem anteceder a configuração de produção e qualquer cobrança real.
+
+
+## 16. Visual flow diagrams for implementation planning
+
+### 16.1. Party Maker — consolidated request, independent supplier confirmations
+
+```mermaid
+flowchart TD
+    A["EventRequest · DRAFT"] --> B["Consumer configures event and adds items"]
+    B --> C["Validate category-specific required fields"]
+    C --> D["Calculate running total and show per-supplier breakdown"]
+    D --> E["Consumer submits one EventRequest"]
+    E --> F["Create one SupplierSubOrder per supplier"]
+    F --> G["Notify each supplier independently"]
+    G --> H{"Supplier response"}
+    H -->|Confirm as requested| I["Create temporary AvailabilityHold"]
+    H -->|Decline| J["Mark sub-order DECLINED"]
+    H -->|Request change| K["Show changed price/date/scope to consumer"]
+    K --> L{"Consumer decision"}
+    L -->|Accept change| I
+    L -->|Reject change| J
+    I --> M["Aggregate supplier responses"]
+    J --> M
+    M --> N{"All required responses resolved?"}
+    N -->|No| O["Show pending suppliers and response deadlines"]
+    O --> M
+    N -->|Yes / consumer chooses partial set| P["Consumer reviews final confirmed composition"]
+    P --> Q["Validate event dependencies and total"]
+    Q --> R["Create PaymentGroup"]
+    R --> S{"PSP supports multi-receiver split?"}
+    S -->|Yes| T["Create native split payment"]
+    S -->|No| U["Create correlated PaymentIntents per supplier"]
+    T --> V["Wait for server-side PSP confirmation"]
+    U --> V
+    V --> W{"Payment approved for each selected sub-order?"}
+    W -->|No / pending| X["Reconcile PSP; allow retry only after safe status check"]
+    X --> V
+    W -->|Yes| Y["Generate immutable ContractRecord per supplier"]
+    Y --> Z["Convert holds into confirmed bookings"]
+    Z --> AA["Supplier fulfilment and customer tracking"]
+    AA --> AB["Completion evidence / review window"]
+    AB --> AC["Earn commission on eligible completed value"]
+    AC --> AD["Reconcile PSP settlement and payout"]
+```
+
+**Key interpretation:** the consumer submits one request. Suppliers respond to their own sub-orders. The consumer reviews the resulting composition once; the consumer does not perform a separate "accept quote" step for each supplier. If a material supplier change is proposed, the consumer must consent to that change.
+
+### 16.2. Immediate purchase — standalone cart
+
+```mermaid
+flowchart TD
+    A["Consumer chooses product, kit or immediate service"] --> B["Add to standalone cart"]
+    B --> C["Group lines by supplier and fulfilment method"]
+    C --> D["Revalidate price, quantity, stock and delivery/pickup"]
+    D --> E{"Cart valid?"}
+    E -->|No| F["Show unavailable/changed lines; request consumer decision"]
+    F --> C
+    E -->|Yes| G["Show full total and terms"]
+    G --> H["Consumer confirms checkout"]
+    H --> I["Create CheckoutOrder and PaymentGroup"]
+    I --> J["Create split or supplier-linked PaymentIntents"]
+    J --> K["Server validates PSP payment event"]
+    K --> L{"Payment approved?"}
+    L -->|No / pending| M["Show payment status and reconcile"]
+    M --> K
+    L -->|Yes| N["Create order ContractRecord / receipt"]
+    N --> O["V1 · Paid order confirmation"]
+    O --> P["Supplier fulfils delivery, pickup or service"]
+    P --> Q["Completion evidence, customer support and review"]
+    Q --> R["Commission eligibility and payout reconciliation"]
+```
+
+### 16.3. Contract and payment boundaries
+
+- Supplier availability confirmation is not payment approval.
+- Payment approval is not proof that service was completed.
+- Contract generation records the accepted scope and commercial terms; it does not replace the operational fulfilment state.
+- Refunds and disputes are separate records linked to the original supplier sub-order and payment.
+- A failed webhook delivery must not duplicate a charge, contract or payout; use idempotency and reconciliation.
