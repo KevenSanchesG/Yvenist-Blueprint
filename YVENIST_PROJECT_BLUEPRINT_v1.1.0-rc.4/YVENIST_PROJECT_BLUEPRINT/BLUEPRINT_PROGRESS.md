@@ -54,3 +54,12 @@
 ## Next phase
 
 Start Phase 2 with the operating/business model and product/service journeys. Preserve the owners' ongoing Figma flow changes as live design input, and sequence MVP delivery into complete vertical slices without silently dropping approved scope.
+
+
+## Commercial model and transaction lifecycle — active work
+
+- Expanded the commercial/operating model proposal to v0.2 with commission calculation, sponsored placements, future subscription, supplier onboarding, multi-supplier request, payment/split, settlement, contracts, cancellations, no-shows, disputes and legal/accounting/PSP gates.
+- Added `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` with aggregate boundaries, state machines, event names, financial invariants and Claude Code acceptance criteria.
+- Added `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` so Keven and Rafael can decide remaining commercial parameters together.
+- No new commercial parameters were owner-approved during this design pass. 10% commission and operational defaults remain proposals.
+- `main` now contains the previously prepared 27-commit phase-1 work; this update continues directly on `main`.
