@@ -1,72 +1,68 @@
 # OWNER CONFIRMATION REGISTER — 2026-11-18
 
-**Status:** OPEN / HUMAN_CONFIRMATION_REQUIRED  
-**Authority source:** `00_GOVERNANCE_AND_PROJECT_CONTROL/DECISION_AUTHORITY_AND_RACI.md`  
-**Purpose:** consolidate decisions and confirmations required from the human owners. This register does not assign authority or approve proposals by itself.
+**Status:** OWNER_RESPONSES_RECORDED / FOLLOW_UP_DESIGN_AND_LEGAL_REVIEW_PENDING  
+**Decision source:** joint owner response submitted in the Yvenist project conversation on 2026-11-18.  
+**Owners:** Keven and Rafael.  
+**Purpose:** track what the owners have decided, what remains a proposal, and what still requires evidence or specialist review.
 
-## 1. Governance and responsibility
+> This register supersedes the unanswered-status snapshot in the initial audit. The dated decision record is the detailed source of truth: `00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_DECISION_RECORD_2026-11-18.md`. Do not keep treating PM-20–PM-26, the brand confirmations or the Product Creation Framework as unanswered. Do not promote proposals in the commercial/operations documents to approved policy.
 
-| ID | Item requiring confirmation | Current evidence/status | Required human action |
-|---|---|---|---|
-| GOV-01 | Assign accountable humans for business, product, technology, design/brand, operations and finance | RACI document keeps named people `UNASSIGNED` | Confirm names, domains, individual or joint approval, and escalation route |
-| GOV-02 | Assign qualified legal/privacy and security reviewers when needed | No named reviewers recorded | Identify professional reviewers before legal/privacy/security sign-off |
-| GOV-03 | Confirm who can approve release, budget, commercial policy and changes to production | No approved authority mapping | Record explicit approval rights; do not infer them from GitHub/Figma access |
+## 1. Confirmed owner decisions
 
-## 2. Business and product decisions
+| ID | Decision | Status |
+|---|---|---|
+| GOV-01 | Strategic and commercial decisions require approval from both owners. Technical and operational decisions follow designated responsible people; the names/areas will be assigned later. | CONFIRMED — detailed RACI still pending |
+| GOV-02 | The Product Creation Framework v0.1 is approved as the official working basis. | APPROVED_AS_OFFICIAL_WORKING_BASELINE |
+| DES-01 | Primary brand color is `#FF5637`; this supersedes the earlier `#FF6B00` decision. | CONFIRMED — Figma/token migration pending |
+| DES-02 | The three-screen hybrid direction is approved. | CONFIRMED |
+| DES-03 | Plus Jakarta Sans is the canonical typeface. | CONFIRMED |
+| DES-04 | Keep Material Icons and approve the current mapping, subject to future changes. | CONFIRMED — mapping is revisable |
+| DES-05 | No existing app-icon concept is selected; create new explorations. | CONFIRMED |
+| DES-06 | The existing foundation-token base is approved as a baseline and may be improved with Claude/ChatGPT support. | APPROVED_BASELINE / ITERATIVE_REFINEMENT |
+| DES-07 | The number shown on venue/supplier cards means customer ratings. | CONFIRMED — review eligibility/calculation still requires specification |
+| DES-08 | Motion and performance evaluation should be a mandatory approval gate where practicable. | CONFIRMED_AS_DESIGN_QUALITY_GATE |
+| PM-20 | Supplier-defined fixed prices vary by event/party type; the Party Maker total updates as items are added/removed; one event request is submitted and each supplier receives its own alert/sub-request. | CONFIRMED — pricing matrix and partial-confirmation rules need specification |
+| PM-21 | Date and guest count are required when the selected category or supplier requires them. | CONFIRMED — conditional requiredness matrix needed |
+| PM-22 | An event with no items is deleted after a warning to the consumer. | CONFIRMED — recovery/undo interaction still needs UX decision |
+| PM-23 | The consumer does not need to accept a supplier-created quote as a separate step. Each supplier confirms whether it can fulfil the requested service on the requested date. | CONFIRMED — define price-change and partial-availability exceptions |
+| PM-24 | Consumer and supplier identities are visible to each other from the beginning. | CONFIRMED |
+| PM-25 | Each category has its own configuration form. | CONFIRMED |
+| PM-26 | A supplier can create kits/bundles and also offer independent/separate services or items. | CONFIRMED |
+| PAY-01 | Payment and contracting capabilities are part of the MVP and must be designed and implemented in the Blueprint. | CONFIRMED_SCOPE |
+| FLOW-01 | In the Direction page, layer 11 / item 3, V1 becomes the confirmation for an immediate order whose payment has completed; V2 remains the confirmation for a quote/request submitted from Party Maker. | CONFIRMED — Figma frame update/reconciliation pending |
+| FLOW-02 | Immediate purchases (e.g. a snack kit) need a conventional cart/checkout path separate from Party Maker event composition. | CONFIRMED_NEED / visual solution to be designed |
+| BIZ-01 | Revenue streams: commission on completed bookings/transactions; paid priority placement in contextual Explore results; a consumer subscription may be introduced later with benefits to be designed. | CONFIRMED_DIRECTION |
+| BIZ-02 | Supplier commission is percentage-based on the contracted value. | CONFIRMED_DIRECTION — rate, calculation base and payout rules remain open |
+| SCOPE-01 | All capabilities listed in the prior MVP scope question are intended to be included in the MVP scope. | CONFIRMED_SCOPE_INTENT — sequence into deliverable slices; do not silently remove capabilities |
+| ENV-01 | Rafael's development environment is Windows native; Claude Code is used via terminal. | CONFIRMED |
+| ENV-02 | Local repository path is not yet known; two Claude sessions are only probable; Figma version history has not yet been inspected by the owners. | OPEN / TO VERIFY |
 
-| ID | Item | Source evidence | Status / action |
-|---|---|---|---|
-| BIZ-01 | Yvenist monetization and revenue model | `docs/00-project/vision.md` identifies monetization as an open question; code documentation says no charge is implemented at the inspected revision | Owners must decide the intended revenue model and when it applies; finance/legal review as appropriate |
-| PM-20 | Whether supplier quotes are requested and returned per item | ADR-019 / Party Maker known issues | Awaiting owner confirmation |
-| PM-21 | Whether requesting a quote requires a future event date and guest count | ADR-019 / PM-21 | Awaiting owner confirmation |
-| PM-22 | Whether an event may remain empty and persist after its final item is removed | ADR-019 / PM-22 | Awaiting owner confirmation |
-| PM-23 | Meaning of “quote accepted”; whether it remains explicitly non-reserving and non-payment | ADR-019 / PM-23; the inspected docs state no reservation or payment | Confirm exact product/legal meaning and user-facing wording |
-| PM-24 | Whether supplier and customer identities remain hidden from each other in the quote flow | ADR-019 / PM-24 | Awaiting owner confirmation; assess trust, support and legal implications |
-| PM-25 | Category-specific configuration fields and requiredness | ADR-019 / PM-25 | Confirm the product rules for each category |
-| PM-26 | Configuration fields for services supplied by the listing owner | ADR-019 / PM-26 | Confirm which fields apply to each own-vendor service |
-| BIZ-02 | Whether and when in-app chat, notifications, payments, reviews, availability and other roadmap capabilities enter scope | Existing repository docs mark several as not implemented / “Em breve” | Prioritize through strategy and roadmap; do not treat Figma screens as proof of implementation |
-| BIZ-03 | Supplier commercial terms, cancellation, refunds, disputes, commissions and platform obligations | Not fully settled by the remote code audit | Decide in owner documents with operations, finance and legal input |
+## 2. Design and Figma reconciliation
 
-## 3. Brand and design confirmations from Figma
+The current human decision for the primary color is `#FF5637`, not the older `#FF6B00`. Existing Figma content and token samples may still contain the older color; treat those as stale source material pending controlled migration, not as a reason to override the new decision.
 
-Figma file: `Yvenist_v0`, key `G2QX9NnDe8gJOnTrFUw1jH`. The items below are based on the current readable page metadata/text, not a version-history audit.
+The currently approved hybrid direction, typeface, Material Icons mapping, rating meaning and V1/V2 confirmation semantics must be reconciled with the latest human-authored Figma state. Preserve any edits the owners make during the ongoing design flow. Before changing frames or tokens, inspect the current live file and capture a dated snapshot; do not restore an earlier version or overwrite intervening owner edits.
 
-| ID | Item | What the current Figma evidence says | Required confirmation |
-|---|---|---|---|
-| DES-01 | Brand orange #FF6B00 | Direção page labels it a decision attributed to Rafael on 2026-10-28; another note still says Keven needs to confirm the orange | Reconcile the contradictory approval notes and record a single joint/authorized brand decision |
-| DES-02 | Three-screen hybrid direction | Section 14 “Híbrida aprovada: 3 telas (30/10)” describes approval by Rafael and Keven, while some detailed choices are separately labelled inference / to confirm with Rafael | Confirm the exact accepted scope and create/link a formal decision record |
-| DES-03 | App icon | Section 15 contains four explorations A–D and explicitly marks all as “sem aprovação” | Select or reject concepts jointly; perform separate visual and trademark review; no concept is final now |
-| DES-04 | Typography | Direction page still records an open Inter versus Plus Jakarta Sans choice; hybrid section says the hybrid uses only Plus Jakarta Sans | Confirm the canonical typeface and reconcile with implemented Flutter assets/tokens |
-| DES-05 | Icon library and icon-to-glyph mapping | A note lists icon set/mapping as pending; Components page has an icon family | Confirm the supported icon set and final mapping |
-| DES-06 | Rating semantics | Direction page asks what the “nota” on a venue card represents | Define provenance, calculation, display conditions and empty/missing state before real ratings are shown |
-| DES-07 | Motion validation hardware | Direction page asks for an entry-level Android device to evaluate motion | Choose device/test profile and accessibility/performance criteria |
-| DES-08 | Foundation token status | Fundações page describes token values as working values dated 2026-10-31, with confirmation still pending; tokens include #FAF7F4, #FFFFFF, #F3EEE9, #FFEDE0, #1E1A16, #5A5249, #716A60, #FF6B00 and #B34500 | Confirm which tokens are approved baseline vs proposal and map them to Flutter theme values |
-| DES-09 | Client Party Maker screens | Client screens page contains 126 first-level frame variants; some states include “Pago” and “Orçamento aceito” | Confirm which screens/states are current, future, sample-only or deprecated; reconcile with implemented state machine |
+Figma file: `Yvenist_v0`, key `G2QX9NnDe8gJOnTrFUw1jH`. Version history is still unverified; the owners report they have not tried to inspect it.
 
-## 4. Release and operational blockers recorded in the target repository
+## 3. Open specification work — not owner-decision blockers
 
-The target repository's known-issues document at the inspected commit lists the following release or live-use concerns. This register does not independently validate them beyond the repository documentation:
+- Supplier price matrix: how event type, guest count, quantity, date, add-ons and regional differences affect the fixed listing price.
+- Aggregated event request: supplier-specific sub-orders, partial acceptance/decline, expiry, replacement and consolidated payment.
+- Conditional date/guest requirements by category and supplier.
+- Empty-event warning: wording, destructive confirmation, immediate undo and recovery window.
+- Customer-rating system: who can review, when a review becomes eligible, rating aggregation, moderation, verified-purchase indicator and empty state.
+- Immediate cart: fulfilment method (delivery, pickup or service redemption), inventory/availability, taxes/fees, order tracking and returns.
+- Subscription benefits, paid-placement disclosure and ad inventory rules.
+- Detailed MVP feature sequencing and acceptance criteria.
+- Named accountable people for technical and operational domains; exact local repo path and actual two-session pilot.
 
-- KI-01: legal terms are preliminary and need legal review/company details.
-- KI-02: privacy policy and account-deletion page lack public URLs.
-- KI-03: API is not hosted.
-- KI-05: iOS has not been built and requires a Mac/Xcode workflow.
-- KI-60: ADR-019 business choices still require owner confirmation.
-- KI-61: notifications are absent.
-- KI-62: quote acceptance does not reserve a date, create a contract or collect payment; quote response expiry is not implemented.
-- KI-63: free-text item/vendor messages may receive personal data.
+## 4. Commercial, operational, legal and financial review
 
-For each blocker, establish owner, target milestone, acceptance evidence and whether it blocks internal testing, beta, store publication or real transactions.
+`MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` contains proposals for commissions, cancellations, refunds, no-shows, disputes, supplier SLAs, service fulfilment and payment settlement. These are NOT yet policy approvals.
 
-## 5. Decision capture rule
+Before real transactions, obtain Brazilian legal, accounting/tax, privacy and payment-provider review. In particular, review consumer cancellation/withdrawal rights, supplier contract terms, payment split/settlement, chargebacks, refunds and any proposed cancellation consequences.
 
-For every resolved item, create or update the designated owner document and decision record with:
-- decision ID and exact wording;
-- accountable human(s) and approval date;
-- alternatives considered and rationale;
-- affected scope, users, policies and systems;
-- implementation/documentation impact;
-- evidence and reviewer input;
-- review date or trigger.
+## 5. Source and authority rule
 
-Do not change a status to `APPROVED` merely because a discussion, prototype, implementation or this register exists.
+For every decision, retain its exact wording, approving owners, date, rationale, affected flows/data/policies, evidence, implementation impact and review trigger. Strategic and commercial decisions require both owners. Technical/operational decisions are approved by the assigned accountable person once the RACI is named. Do not infer approval from a mockup, source code, payment-provider capability or AI recommendation.
