@@ -2,10 +2,11 @@
 
 **Blueprint architecture:** 1.0.0 — APPROVED_AS_WORKING_ARCHITECTURE  
 **Document version:** 0.1  
-**Status:** PROPOSAL / HUMAN_REVIEW_REQUIRED  
-**Document owner:** UNASSIGNED  
+**Status:** APPROVED_AS_OFFICIAL_WORKING_BASELINE  
+**Document owner:** Keven and Rafael (joint approval; domain owners to be assigned as the operating model matures)  
 **Applies to:** Yvenist company, marketplace, products, services, internal tools and digital surfaces  
 **Last updated:** 2026-11-18
+**Approval:** Joint owners approved v0.1 as the official working basis on 2026-11-18. Detailed templates, RACI assignments and process pilots remain progressive follow-up work.
 
 ---
 
