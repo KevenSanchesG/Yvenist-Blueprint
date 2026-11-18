@@ -75,10 +75,24 @@ The owners approved the revenue direction, but not the concrete values/policies.
 - `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed state model;
 - `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint approval sheet.
 
-Still requiring both owners: **COM-01 progressive commission proposal (3% Founding Partner launch / 5% expansion / 10% maturity target, submitted by Keven; awaiting Rafael's approval)**, commissionable base, allocation of PSP fees, event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
+COM-01 is jointly approved as a business rule on 2026-11-18: 3% Founding Partner for 12 months after first completed transaction; 5% only after the category/area Expansion gate and notice/express acceptance; 10% only after the Maturity gate and joint review. Initial local supply target is 20 active founding suppliers across four families, in Campo Grande / Zona Oeste. Detailed thresholds and policy are in the commission and local launch plans. Still requiring both owners: commissionable base (COM-02), PSP fee allocation (COM-03), event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
 
 The detailed COM-01 proposal is in `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. It must not be treated as approved policy until both owners explicitly approve the same version.
 
 The architecture recommendation is one PaymentGroup checkout experience with either native PSP split for multiple receivers or separate correlated PaymentIntents per supplier sub-order. Provider selection and multi-receiver eligibility must be validated before production.
 
 The documents are proposals, not final contracts or active financial policy. Legal, accounting and PSP review are launch gates.
+
+
+## 7. COM-01 e mercado-piloto — confirmação conjunta (2026-11-18)
+
+Keven informou expressamente que Rafael está de acordo com as definições documentadas. Registrar como aprovadas conjuntamente:
+- Estrutura de comissão 3% / 5% / 10%, paga pelo fornecedor por subpedido concluído.
+- 3% durante 12 meses desde a primeira contratação concluída do Parceiro Fundador.
+- A fase de 5% exige o prazo mínimo e o gate de Expansão por categoria/área; sem gate, continua 3%.
+- 10% exige gate de Maturidade, análise de valor entregue e aprovação conjunta; não é automático pelo calendário.
+- Aviso com 60 dias corridos, lembretes em 30 e 7 dias, aceite expresso e não retroatividade.
+- 20 fornecedores fundadores ativos e distintos, quatro famílias com meta de cinco cada: espaços/salões; buffet/alimentação; decoração/locação; confeitaria/doces/kits.
+- Campo Grande / Zona Oeste como geografia inicial, com Campo Grande como núcleo de aquisição e expansão por área de atendimento comprovada.
+
+Os thresholds são metas internas de gestão do piloto, não benchmarks universais. Ver os dois documentos normativos listados no approval sheet.
