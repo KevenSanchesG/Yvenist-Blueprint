@@ -156,3 +156,15 @@ All previously listed functional areas are intended to be within MVP scope. Deli
 8. analytics, sponsored Explore and future subscription foundation.
 
 This list is a proposed implementation order; the scope decision itself remains as stated by the owners.
+
+
+## 11. Contract and payment lifecycle reference
+
+The owner-approved consumer flows are now complemented by the proposed domain specification:
+- `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` defines aggregate boundaries, independent states, event transitions, webhooks/idempotency, contracts, commission and payouts.
+- `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` defines commercial assumptions and operational policy proposals.
+- `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` lists the remaining joint owner decisions.
+
+For implementation, keep EventRequest, SupplierSubOrder, PaymentGroup, PaymentIntent and ContractRecord separate. The consumer should experience one consolidated review/checkout, even if the PSP requires payment intents per supplier. Do not equate supplier availability confirmation with payment success or final contract creation.
+
+The 10% pilot commission, event deposit rules, hold duration, supplier SLAs, cancellation windows and payout timing remain proposed pending joint approval. No real payment provider or production policy is authorized by these documents.
