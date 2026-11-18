@@ -5,12 +5,13 @@
 
 ## Finalidade
 
-Área de assets: video and motion. Guardar somente materiais com origem, licença, versão e contexto de uso registrados.
+Área para vídeos, animações e motion assets. Preferir Rive para animações vetoriais interativas, Lottie para movimento decorativo simples e Flutter nativo para transições/microinterações leves. Toda animação relevante deve ter gatilho, duração, curva, fallback, modo de movimento reduzido, orçamento de tamanho e evidência de desempenho no Android de referência.
 
-## Documentos previstos
+## Governação de assets
 
-- Consultar a árvore oficial em `BLUEPRINT_ARCHITECTURE.md`; documentos serão adicionados progressivamente.
-
-## Regra de criação
-
-Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, documento proprietário, fontes/entradas, responsável, dependências, status, critérios de aceite e documentos relacionados. Atualizar `BLUEPRINT_PROGRESS.md` e `BLUEPRINT_CHANGELOG.md` ao concluir mudanças relevantes.
+- Manter fonte editável e exportação de produção separadas.
+- Registrar origem, licença, autoria, versão, responsável, estado de aprovação e contexto de uso.
+- Incluir versões clara/escura, dimensões, formatos, fallback estático e comportamento de movimento reduzido.
+- Somente exportações aprovadas devem ser adicionadas aos assets do app.
+- Seguir `23_INTEGRATION_AND_HANDOFF/VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md`.
+- Atualizar progresso e changelog ao concluir mudanças relevantes.
