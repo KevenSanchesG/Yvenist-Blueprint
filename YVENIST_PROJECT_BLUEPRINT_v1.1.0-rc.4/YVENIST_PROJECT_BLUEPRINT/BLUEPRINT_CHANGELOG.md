@@ -1,5 +1,30 @@
 # BLUEPRINT CHANGELOG
 
+## Main update — commercial model and transaction lifecycle (2026-11-18)
+
+### Added and expanded directly in main
+- Expanded the commercial and operating model to proposal v0.2, including commission base, per-supplier commission, paid placements, future consumer subscription, supplier onboarding, supplier-specific sub-orders, payment/split options, payout, cancellation, refunds, disputes and specialist launch gates.
+- Added transaction domain and state machine for EventRequest, SupplierSubOrder, CheckoutOrder, PaymentGroup, PaymentIntent, ContractRecord, CommissionEntry, PayoutRecord, RefundRecord and DisputeCase.
+- Added the joint approval sheet for remaining commission, payment, SLA, cancellation, completion and payout decisions.
+- Updated owner register, decision record, customer flow document, progress, release manifest and integration index.
+
+### Key technical conclusion
+- Maintain one consumer checkout experience where possible, but support either a PSP-native multi-receiver split or separate correlated PaymentIntents for supplier sub-orders. Do not assume a provider's 1:1 split product supports a multi-supplier event.
+- Supplier availability confirmation, payment success and final contract are separate states.
+- No new commission percentage or cancellation penalty was approved in this update.
+
+### Not approved / not performed
+- No payment provider selected.
+- No live payment, split, wallet, escrow or payout system activated.
+- No legal/contractual terms approved for production.
+- No target app source code changed.
+- No Figma frames edited.
+- No ZIP release or merge from a feature branch; documentation was committed directly to main.
+
+---
+
+# BLUEPRINT CHANGELOG
+
 ## Working-branch update — joint owner decisions and product-flow clarification (2026-11-18)
 
 ### Confirmed by both owners
