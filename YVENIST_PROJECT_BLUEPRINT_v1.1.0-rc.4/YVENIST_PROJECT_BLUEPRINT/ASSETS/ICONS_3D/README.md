@@ -5,12 +5,12 @@
 
 ## Finalidade
 
-Área de assets: icons 3d. Guardar somente materiais com origem, licença, versão e contexto de uso registrados.
+Ícones 3D de marca e assets tridimensionais especiais, somente quando agregarem valor real. Modelar no Blender e exportar formatos móveis otimizados (por exemplo, glTF/GLB) quando houver necessidade de renderização em runtime; preferir render estático quando a interação 3D não for necessária.
 
-## Documentos previstos
+## Governação de assets
 
-- Consultar a árvore oficial em `BLUEPRINT_ARCHITECTURE.md`; documentos serão adicionados progressivamente.
-
-## Regra de criação
-
-Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, documento proprietário, fontes/entradas, responsável, dependências, status, critérios de aceite e documentos relacionados. Atualizar `BLUEPRINT_PROGRESS.md` e `BLUEPRINT_CHANGELOG.md` ao concluir mudanças relevantes.
+- Manter arquivo de cena/fonte e exportação de produção separados.
+- Registrar origem, licença, autoria, versão, texturas, materiais e destino.
+- Medir tamanho, memória e impacto em GPU no aparelho Android de referência.
+- Somente exportações aprovadas devem ser adicionadas aos assets do app.
+- Seguir `23_INTEGRATION_AND_HANDOFF/VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md`.
