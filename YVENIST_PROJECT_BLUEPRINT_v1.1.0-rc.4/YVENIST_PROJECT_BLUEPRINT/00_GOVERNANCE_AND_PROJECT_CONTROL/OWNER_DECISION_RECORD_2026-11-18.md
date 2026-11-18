@@ -88,3 +88,16 @@ All human-authored changes made by Keven and Rafael during the ongoing Figma/des
 6. record what changed and why.
 
 Do not restore older versions or rebuild from stale screenshots without explicit owner instruction. Figma version history is currently unverified.
+
+
+## 8. Commercial model and transaction lifecycle — proposal status
+
+On 2026-11-18, the owners asked to develop the commission model and the complete contracting cycle. This work is documented separately; it does not create new owner approvals for percentages or policies.
+
+- The existing approved direction remains: percentage-based supplier commission on completed contracting; paid priority exposure in contextual Explore; future consumer subscription.
+- The 10% pilot commission, commission base, PSP fee allocation, deposit/balance terms, temporary availability hold, supplier response SLAs, cancellation/no-show rules and payout trigger are recommendations awaiting approval by both owners.
+- The proposed system uses one EventRequest with SupplierSubOrders, separate immediate CheckoutOrder, PaymentGroup, PaymentIntent, ContractRecord, CommissionEntry, PayoutRecord, RefundRecord and DisputeCase.
+- Supplier availability confirmation is distinct from payment and final contract generation. The recommended flow creates a temporary AvailabilityHold, then finalizes contract after the consumer completes the contracting/payment step.
+- The owner approval sheet is `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md`.
+
+No commercial fee or cancellation penalty is approved by this supplement. Both owners must approve the final terms, and specialist review is required before production charges.
