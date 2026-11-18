@@ -5,7 +5,7 @@
 **Working branch:** main (preparation branch retained as history)  
 **Working delta status:** PHASE_1_CLOSED_WITH_SCOPED_PENDENCIES  
 **Product Creation Framework:** 0.1 — APPROVED_AS_OFFICIAL_WORKING_BASELINE  
-**Owner decisions:** joint response recorded 2026-11-18; detailed commercial and operational proposals remain unapproved.
+**Owner decisions:** joint responses recorded 2026-11-18; COM-01 and local pilot plan approved as working business rules; COM-02/COM-03 and other transaction policies remain pending.
 
 ## Version identity
 
@@ -37,6 +37,14 @@
 - In the design's layer 11 / item 3, V1 is immediate order confirmation after payment, while V2 is Party Maker quote/request confirmation.
 - Owner edits made during the ongoing design flow must be preserved. The current live Figma structure should be re-read before editing; version history remains unverified.
 - No Figma file, target app code or local working tree was modified by this documentation update.
+
+## Local launch and commercial policy additions — 2026-11-18
+
+- `23_INTEGRATION_AND_HANDOFF/LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md` — approved working plan for 20 active founding suppliers, four priority category families and Campo Grande / Zona Oeste launch.
+- `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md` — COM-01 v0.2, jointly approved as business policy: 3% for 12 months after first completed transaction, 5% after expansion gates, 10% after maturity gates; 60-day notice and express acceptance.
+- `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — COM-01 marked jointly approved; other commercial/payment items remain pending.
+
+COM-01 approval does not authorize production charges. COM-02 commissionable base, COM-03 PSP fee allocation, legal/accounting review and PSP sandbox remain launch gates.
 
 ## Package safety
 
