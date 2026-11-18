@@ -1,174 +1,377 @@
-# MARKETPLACE COMMERCIAL AND OPERATING MODEL — PROPOSAL — 2026-11-18
+# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.2
 
-**Status:** PROPOSAL / JOINT_OWNER_APPROVAL_AND_SPECIALIST_REVIEW_REQUIRED  
-**Purpose:** develop the owners' monetization direction into an explicit, testable marketplace model. Nothing in this document is an approved supplier contract or a final consumer policy.
+**Data:** 2026-11-18  
+**Status:** PROPOSTA ESTRUTURADA / AGUARDANDO APROVAÇÃO CONJUNTA E REVISÃO ESPECIALIZADA  
+**Decisões de origem:** respostas conjuntas de Keven e Rafael registradas em 2026-11-18  
+**Documento relacionado:** `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md`
 
-## 1. External reference points (not copied as Yvenist policy)
+> Este documento transforma as direções dos responsáveis em um modelo operacional recomendado. A comissão sugerida, as políticas de cancelamento, os prazos e os meios de pagamento abaixo ainda não são decisões aprovadas. Não devem ser publicados como termos finais nem implementados como política comercial definitiva antes da aprovação de ambos e das revisões jurídica, contábil e do provedor de pagamentos.
 
-- **iFood restaurant plans:** its public partner information describes a Basic plan with 12% commission on delivery orders, 3.2% online-payment fee and a monthly fee when the stated sales threshold is exceeded; its Delivery plan has a higher commission (23%) and includes iFood logistics/operational capabilities. This shows that commission can vary with the service bundle and that payment/logistics costs can be separately visible. It is not a direct rate benchmark for Yvenist because Yvenist does not initially provide the same food-delivery logistics. Source: https://parceiros.ifood.com.br/restaurante/planos-ifood
-- **Airbnb Brazil host fee:** Airbnb's 2026 host-fee explainer describes a single host service-fee structure and states 16% for Brazil/Mexico listings in the cited article. Airbnb also publishes a separate cancellation policy for service/experience hosts, including possible consequences for unjustified host cancellations. This illustrates platform-side pricing and reliability incentives, not a rate or penalty to copy. Sources: https://www.airbnb.com.br/resources/hosting-homes/a/how-much-does-airbnb-charge-hosts-288 and https://www.airbnb.com.br/help/article/2039
-- **iFood cancellations:** the public consumer policy uses order stage, preparation/dispatch and delay as important distinctions; a refund outcome is not identical at every stage. This supports a lifecycle-based cancellation policy rather than one universal button/rule. Source: https://institucional.ifood.com.br/clientes/cancelar-pedido-cliente-restaurante-faq/
+## 1. Resumo executivo
 
-## 2. Recommended Yvenist commission model
+O modelo inicial do Yvenist deve combinar três fontes de receita, em momentos diferentes:
 
-### 2.1. Recommended starting point for a controlled pilot
+1. **Comissão por contratação concluída:** receita principal, cobrada do fornecedor conforme percentual acordado e calculada sobre a parte elegível efetivamente concluída.
+2. **Exposição patrocinada no Explorar contextual:** receita adicional de fornecedores que pagam para ocupar espaços identificados como patrocinados. A relevância e a elegibilidade vêm antes da venda de posição.
+3. **Plano de assinatura do consumidor:** direção futura, fora do escopo comercial inicial até que benefícios, preço, capacidade operacional e condições sejam definidos.
 
-**Proposal: 10% supplier-side platform commission on the value of a completed and settled transaction**, charged per supplier sub-order. Start with one transparent rate to make onboarding, calculation and reconciliation simpler. Treat 10% as a hypothesis for a pilot, not an industry standard or a final approved rate.
+A operação deve manter dois tipos de jornada:
 
-Why start simple:
-- easier for suppliers to understand;
-- simple to compare conversion and supplier retention;
-- avoids inventing different rates before category-level margin and support data exists;
-- can be revisited after the first cohort has enough completed transactions and refund/dispute data.
+- **Party Maker:** um pedido do consumidor para organizar um evento, contendo subpedidos individuais por fornecedor. Cada fornecedor confirma ou recusa a própria parte.
+- **Compra imediata:** sacola/carrinho e checkout para produtos, kits ou serviços independentes, sem obrigar a criação de uma festa.
 
-### 2.2. Possible future category bands (illustrative only)
+O Yvenist deve oferecer uma experiência unificada, mas manter separado o registro comercial, financeiro e contratual de cada fornecedor. O total do evento pode ser agregado para o consumidor; a prestação, a resposta, a comissão, o pagamento, o repasse e eventual reembolso devem ser rastreáveis por subpedido.
 
-If data shows the single rate is not viable, test a category matrix, for example:
-- high-ticket space/venue bookings: 8–10%;
-- buffet, decoration, attractions and staffed services: 10–12%;
-- small ready-to-buy kits/items: 10–12%.
+## 2. Referências externas e o que podemos aprender
 
-Do not activate category differences until both owners approve the matrix and finance/legal review the effect on supplier economics, invoices and tax treatment.
+As referências servem para entender mecanismos, não para copiar percentuais ou obrigações.
 
-### 2.3. Commission base and calculation
+### 2.1. iFood
 
-Recommended calculation:
-- calculate separately for each supplier sub-order;
-- apply the commission to the amount actually captured/settled for that supplier's completed items;
-- apply partial refunds proportionally to the affected line/supplier sub-order;
-- do not charge commission on a fully cancelled/unfulfilled order;
-- if a transaction is partly fulfilled, calculate only on the fulfilled, settled portion;
-- preserve the listing/order price snapshot and show any discount, adjustment or payment fee separately.
+A página pública do iFood para restaurantes apresenta planos com comissões diferentes conforme o serviço oferecido. Na página consultada, o Plano Básico indica comissão de 12% sobre pedidos delivery e taxa de 3,2% para pagamentos realizados pelo iFood; o plano com entrega da plataforma indica comissão de 23%, além da taxa de pagamento. Isso demonstra que o preço do marketplace pode distinguir comissão, processamento de pagamento e serviços operacionais incluídos. O Yvenist não deve aplicar automaticamente a taxa maior, pois não está oferecendo a mesma estrutura de entrega/logística.  
+Referências:  
+- https://parceiros.ifood.com.br/restaurante/planos-ifood  
+- https://parceiros.ifood.com.br/restaurante/como-funciona/entregas  
+- https://parceiros.ifood.com.br/restaurante/como-funciona/pagamento
 
-The exact treatment of taxes, delivery, travel, setup, discounts funded by the supplier vs Yvenist, payment-processing fees, tips and chargebacks must be approved by accounting/legal and encoded in the supplier agreement. Do not claim that all taxes or pass-through charges can automatically be excluded; the final base depends on the actual contracting and invoicing model.
+A política pública de cancelamento do iFood diferencia momentos do pedido, como antes da confirmação pela loja e etapas posteriores de preparo/entrega. A lição para o Yvenist é modelar cancelamentos por estado operacional, em vez de apresentar uma regra universal.  
+Referência: https://institucional.ifood.com.br/clientes/cancelar-pedido-cliente-restaurante-faq/
 
-### 2.4. Transparency and supplier payout
+### 2.2. Airbnb
 
-Before a supplier publishes or accepts orders, disclose:
-- gross listing/order amount;
-- platform commission percentage and currency amount;
-- payment-provider cost and who bears it;
-- any promotional spend;
-- refunds/adjustments;
-- expected payout amount and date;
-- what event triggers "completed".
+O artigo do Airbnb publicado em 13 de outubro de 2026 informa taxa única de serviço de 15,5% paga pelo anfitrião em sua estrutura geral, com exceções de 16% para anúncios no Brasil e México, e descreve a dedução da taxa do valor do anfitrião. A plataforma também publica regras específicas para cancelamentos de serviços e experiências por anfitriões, com consequências previstas para cancelamentos sem justificativa válida.  
+Referências:
+- https://www.airbnb.com.br/resources/hosting-homes/a/how-much-does-airbnb-charge-hosts-288
+- https://www.airbnb.com.br/help/article/2039
+- https://www.airbnb.com.br/help/article/2278
 
-The consumer should see the total price and any mandatory fees before paying. The initial proposal is **no hidden consumer surcharge** for the platform commission. The commission is deducted from the supplier settlement rather than silently changing the consumer-visible listing price. Do not prevent suppliers from setting their own published prices, but show the platform commission and resulting net amount clearly.
+O Yvenist pode aprender com transparência de taxas, regras específicas por tipo de serviço, incentivos de confiabilidade e tratamento documentado de exceções. Não deve adotar automaticamente a taxa de 16% ou a penalidade de 20% do Airbnb: são condições de outro produto, contrato e operação.
 
-### 2.5. Completion trigger and settlement
+## 3. Modelo de receita recomendado
 
-Suggested completion triggers:
-- immediate products/kits: proof of delivery or pickup plus consumer confirmation, or a documented resolution if the consumer is unresponsive;
-- scheduled services: supplier marks service fulfilled after the scheduled event/service and consumer confirms, or a defined automatic confirmation window passes without a dispute;
-- high-value/complex services: a milestone or staged settlement may be evaluated, but only after the payment provider and legal/accounting model is validated.
+### 3.1. Comissão por contratação
 
-A dispute should pause only the disputed payout portion where the payment provider supports it. Never promise that Yvenist can hold funds as escrow unless the provider and legal structure expressly permit the chosen design.
+**Proposta para piloto controlado: 10% de comissão do fornecedor**, aplicada por subpedido sobre o valor comissionável da parte efetivamente concluída.
 
-## 3. Paid priority placement in Explore
+Esse número é uma hipótese de partida para teste, não um benchmark obrigatório nem aprovação comercial. A taxa única reduz complexidade inicial, facilita explicação ao fornecedor e permite medir conversão, retenção e margem antes de criar uma matriz de taxas.
 
-The owners approved paid priority exposure in the contextual Explore surface shown after event creation.
+Exemplo meramente ilustrativo:
+- valor comissionável de um subpedido concluído: R$ 1.000,00;
+- comissão proposta de 10%: R$ 100,00;
+- saldo antes das taxas do PSP, tributos, ajustes e outros custos contratualmente atribuídos: R$ 900,00.
 
-Recommended safeguards:
-- mark each paid result plainly as **Patrocinado** or **Destaque pago**;
-- keep organic recommendations separate and explain the difference;
-- do not call paid results "best" or "recommended by customers" merely because the supplier bought placement;
-- apply relevance and eligibility filters first (category, date, location, guest capacity, service needs), then allocate sponsored slots among eligible suppliers;
-- monitor complaints, conversion, fulfilment, cancellations and quality separately for sponsored vs organic placements.
+A comissão deve ser calculada por fornecedor. Um evento com quatro fornecedores terá quatro bases de cálculo e quatro apurações, não uma comissão indistinta sobre todo o evento.
 
-The paid-placement fee is separate from transaction commission. Start with a small, clearly labelled inventory; avoid auction/ranking complexity until there is enough supplier demand and measurable fairness.
+### 3.2. Base de cálculo recomendada
 
-## 4. Future consumer subscription
+Criar uma definição técnica chamada `commissionable_amount`, calculada a partir das linhas do subpedido:
 
-This is a future direction only. Do not include subscription payment or advertised subscription benefits in the MVP until both owners define them.
+- incluir preço dos itens/serviços e adicionais efetivamente contratados e concluídos;
+- considerar descontos financiados pelo próprio fornecedor na base líquida após o desconto;
+- excluir itens cancelados e valores efetivamente reembolsados;
+- tratar separadamente frete, deslocamento, montagem, tributos, gorjetas, descontos financiados pelo Yvenist e valores de terceiros;
+- não presumir que tributos ou despesas acessórias podem ser excluídos da base sem validação contábil e jurídica.
 
-Possible benefits to test:
-- saved planning templates and multiple event-management conveniences;
-- enhanced budget/planning tools;
-- loyalty credits or transparent discounts funded by partners;
-- faster customer support in defined service hours;
-- access to exclusive offers.
+A definição final deve refletir quem vende, quem emite documento fiscal, quem recebe o pagamento e como o contrato descreve a comissão. Registrar essa base no contrato do fornecedor e na configuração de cada versão da política.
 
-**Priority booking** must not be promised as universal. It depends on supplier capacity and partner agreements. If tested, describe it as priority access to designated partner slots, with availability and eligibility displayed, never as a guaranteed queue jump over an already confirmed customer.
+### 3.3. Quando a comissão é gerada
 
-## 5. Operating policies — proposed starting framework
+Recomendação:
+- no pagamento aprovado, registrar a comissão prevista como `pending_completion`;
+- após a conclusão comprovada da parte contratada, marcar a comissão elegível como `earned`;
+- em cancelamento ou reembolso parcial, recalcular/reverter proporcionalmente a comissão da parcela afetada;
+- em chargeback, registrar exposição financeira e seguir o contrato com PSP/fornecedor;
+- nunca considerar uma mera solicitação de orçamento ou resposta positiva do fornecedor como contratação concluída.
 
-### 5.1. Supplier response and confirmation
+Se o PSP deduzir a comissão no momento do pagamento, a escrituração interna ainda deve distinguir comissão calculada, comissão adquirida, reversão e valor a liquidar. A mecânica financeira do PSP e o reconhecimento contábil não são a mesma coisa.
 
-Use separate service levels for:
-- immediate purchase orders;
-- future-dated event/service requests;
-- high-complexity custom jobs.
+### 3.4. Taxa do provedor de pagamento
 
-Each supplier should see the requested date/time, location, event type, guest count where required, line items, price snapshot, required options and response deadline. Supplier actions: confirm as requested, decline with reason, or request a material change. A material price/date/scope change requires consumer consent before payment or contract amendment.
+A taxa do PSP deve aparecer como custo separado da comissão do Yvenist.
 
-The exact response deadlines (minutes/hours/business days) need category testing and owner approval. Do not hard-code one SLA across snacks, venues, buffets and custom decoration.
+Proposta inicial:
+- não esconder a taxa do PSP dentro da comissão;
+- não transferir uma taxa adicional ao consumidor sem decisão conjunta e informação prévia;
+- comparar cenários em que o custo é absorvido pelo Yvenist ou deduzido do recebível do fornecedor;
+- mostrar ao fornecedor o valor bruto, comissão, custo de pagamento, ajustes e líquido estimado antes de aderir e sempre que fizer uma contratação.
 
-### 5.2. Customer cancellation
+A política definitiva precisa ser aprovada pelos dois responsáveis. A ordem de cálculo pode variar conforme o contrato e a implementação do PSP. Por exemplo, a documentação do Mercado Pago informa que, no split 1:1 documentado, a taxa do Mercado Pago é descontada antes da comissão do marketplace. Não codificar uma fórmula universal sem validar o PSP escolhido.
 
-Recommended decision framework:
-- **Before supplier confirmation:** cancellation should be simple; if payment was captured, initiate full refund unless the PSP/payment state proves no capture occurred.
-- **After confirmation but before the supplier's disclosed preparation/customization cutoff:** apply the category-specific pre-disclosed cancellation terms, taking account of any applicable statutory consumer rights.
-- **After materials, customization or staffing have genuinely been committed:** any proposed retained amount should be evidence-based, proportionate, clearly disclosed before purchase and reviewed by Brazilian counsel; do not make arbitrary or punitive deductions.
-- **Partial event cancellation:** cancel/refund the affected supplier sub-order or line item without cancelling unrelated confirmed sub-orders, unless the event dependency means the remaining service cannot work.
+### 3.5. Regras para reembolso e comissão
 
-The policy must be stage-based and category-aware. A customer must be able to see the applicable terms before paying.
+- Cancelamento integral antes de qualquer prestação: comissão adquirida igual a zero; reverter valores ainda não adquiridos.
+- Reembolso parcial: recalcular a comissão sobre a parcela efetivamente mantida e concluída.
+- Serviço parcialmente executado: somente a parte considerada concluída segundo critérios previamente contratados pode gerar comissão; casos disputados ficam pendentes.
+- Chargeback: manter registro separado e não mascarar perda como cancelamento comum.
+- Descontos promocionais: identificar quem financiou o desconto e como ele afeta a base.
 
-### 5.3. Supplier cancellation / inability to fulfil
+## 4. Exposição patrocinada no Explorar
 
-Recommended framework:
-- supplier must cancel promptly through the platform and select/document a reason;
-- notify the consumer immediately;
-- do not pay the supplier for an unfulfilled/cancelled portion;
-- refund the consumer for that portion, subject to payment-provider processing;
-- help the consumer find a comparable replacement where timing allows;
-- log the event and review supplier reliability;
-- use graduated consequences (warning, reduced visibility, temporary booking restriction, suspension) based on repeat behaviour, evidence and a fair review process;
-- exempt genuine events outside the supplier's control when evidenced and reviewed.
+Os responsáveis aprovaram a direção de vender exposição prioritária na área contextual do Explorar, exibida após a criação de uma festa.
 
-Airbnb's published service/experience host policy includes a possible 20% cancellation fee in its own framework. Do not adopt that percentage as a Yvenist penalty without legal and supplier-economics review.
+Regras recomendadas:
 
-### 5.4. Delays, no-shows and failed fulfilment
+1. A etiqueta **Patrocinado** ou **Destaque pago** deve aparecer de modo perceptível.
+2. A compra de exposição não altera nota, quantidade de avaliações, selo de verificação ou qualidade real do fornecedor.
+3. Primeiro aplicar critérios mínimos de elegibilidade: categoria, localidade, data, capacidade, tipo de evento, serviço ofertado e disponibilidade.
+4. Somente entre os elegíveis distribuir as posições patrocinadas.
+5. Manter recomendações orgânicas identificáveis e não misturar pagamento com afirmações como “mais bem avaliado”.
+6. Medir separadamente impressões, cliques, conversão, cancelamentos, reclamações e conclusão de fornecedores patrocinados e orgânicos.
+7. A taxa de exposição é independente da comissão por contratação; deixar isso claro no painel do fornecedor.
 
-Capture promised and actual times. Notify the customer when a supplier reports a delay and offer realistic options: accept a revised time, choose a replacement where possible, or request cancellation/refund under the applicable terms. For event-critical suppliers, define a response/escalation path before the event date.
+**Proposta de início:** inventário pequeno de posições patrocinadas e preço por campanha/região/categoria, sem leilão complexo. Preço, quantidade de posições, duração e política de elegibilidade exigem aprovação conjunta.
 
-For no-shows, capture check-in/arrival evidence, in-app communication and consumer report. Do not automatically decide the dispute from one party's assertion. A no-show by supplier should normally result in refund of the unfulfilled portion and a reliability review. A customer no-show requires separate category-specific terms; do not automatically transfer the full booking amount to the supplier without contractual and legal review.
+## 5. Assinatura do consumidor — fase futura
 
-### 5.5. Changes, disputes and support
+A assinatura é uma direção futura, não uma promessa do MVP.
 
-- No unilateral post-contract price increase or scope change.
-- Material changes must be written, timestamped and consented to by affected parties.
-- Maintain a clear order history and evidence trail.
-- Offer in-app help linked to the exact order/sub-order.
-- Separate normal customer support from a formal dispute case.
-- Provide status, response deadline and next step to both sides.
-- Refund only the affected portion where independent supplier sub-orders make that possible.
-- Define chargeback handling, evidence collection and escalation with the PSP.
+Benefícios possíveis para pesquisa e validação:
+- ferramentas avançadas de planejamento e orçamento;
+- modelos de festas e reutilização de listas;
+- benefícios/condições especiais financiados por parceiros;
+- suporte prioritário em horários e escopo definidos;
+- acesso antecipado a ofertas selecionadas.
 
-## 6. Brazilian legal and regulatory validation — mandatory before launch
+**Prioridade de agendamento** só pode ser anunciada para horários/capacidade expressamente acordados com fornecedores parceiros. Não prometer ultrapassar clientes já confirmados ou garantir vaga sem disponibilidade. A assinatura deve ter preço, renovação, cancelamento, benefícios, limitações e cobrança recorrente transparentes.
 
-The Brazilian Consumer Defense Code (Law 8.078/1990) includes rules on advance access to contract terms (Art. 46), the right of withdrawal for contracts concluded outside commercial premises (Art. 49) and restrictions on abusive clauses, including unilateral changes to price/content (Art. 51). Applicability to each Yvenist category, scheduled event, customized item and supplier relationship must be assessed by qualified Brazilian counsel; do not assume a generic cancellation policy can waive statutory rights.
+## 6. Papéis e relação contratual
 
-Primary source: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+Modelo de produto recomendado, sujeito a parecer jurídico:
 
-Also require review of:
-- whether Yvenist acts as intermediary, marketplace operator, payment facilitator or contractual supplier for each flow;
-- supplier onboarding, business/identity verification and fraud prevention;
-- payment split, settlement timing, chargebacks, refunds and negative balances;
-- invoice/tax responsibility, marketplace commission and service fees;
-- privacy, data-sharing and retention;
-- accessibility and complaint handling.
+- **Consumidor:** solicita e contrata produtos/serviços.
+- **Fornecedor:** cadastra ofertas, define preços, confirma disponibilidade, executa a prestação, responde por suas obrigações e recebe o valor devido.
+- **Yvenist:** opera o marketplace, catálogo, descoberta, pedido, comunicação, suporte, regras de plataforma e integração com PSP, recebendo a comissão e receitas de divulgação conforme contratos.
 
-## 7. Decisions still required from both owners
+A qualificação jurídica do Yvenist não deve ser presumida apenas pelo rótulo “marketplace”. A forma de exibição, cobrança, recebimento, repasse, emissão fiscal, suporte e responsabilidade pode alterar a análise. Antes de transações reais, advogado brasileiro deve revisar a estrutura contratual e o papel do Yvenist em cada fluxo.
 
-1. Pilot commission rate and commission calculation base.
-2. Whether payment-provider fees are absorbed by Yvenist or passed through transparently to suppliers.
-3. Exact event-order sequence: payment after all suppliers confirm, staged payment, deposits or category-based variation.
-4. Supplier response deadlines by category.
-5. Consumer cancellation windows and any evidence-based cost recovery by category.
-6. Supplier consequences and exception/appeal process.
-7. No-show rules for customer and supplier.
-8. Paid placement pricing and number/position of sponsored slots.
-9. Consumer subscription benefits, price and launch timing.
-10. Legal/accounting/payment-provider reviewers and documented approval.
+### 6.1. Cadastro e habilitação do fornecedor
 
-Until these decisions are closed, the rules above are design proposals only. Use test data and sandbox payment flows; do not initiate live charges.
+Antes de aceitar pedidos pagos, exigir conforme categoria e análise de risco:
+- identidade e dados cadastrais do responsável;
+- dados empresariais/fiscais necessários;
+- conta de recebimento e vinculação OAuth/PSP quando aplicável;
+- categorias e área atendida;
+- documentos/licenças exigidos para a atividade específica, quando aplicáveis;
+- catálogo, preço, conteúdo incluso/excluído, disponibilidade e condições de cancelamento;
+- aceite dos termos de fornecedor, comissão, pagamento e política de atendimento.
+
+A aprovação do cadastro no Yvenist não substitui licenças profissionais, sanitárias, municipais ou outras exigências da atividade do fornecedor.
+
+## 7. Pedido de evento e subpedidos
+
+### 7.1. Uma solicitação do consumidor, várias relações comerciais
+
+Quando o consumidor envia o Party Maker:
+- o Yvenist cria um `EventRequest`;
+- agrupa linhas por fornecedor em `SupplierSubOrder`;
+- registra um snapshot de preço, data, endereço/área, evento, convidados e configurações;
+- notifica cada fornecedor apenas sobre seu subpedido;
+- cada fornecedor responde independentemente.
+
+O total consolidado é uma visão para o consumidor. Não transforma os vários fornecedores em uma única empresa nem cria uma única obrigação indivisível.
+
+### 7.2. Resposta do fornecedor
+
+O fornecedor pode:
+- **Confirmar como solicitado:** confirma capacidade, data, escopo e preço do snapshot.
+- **Recusar:** informa motivo e a parte fica indisponível.
+- **Solicitar alteração:** propõe mudança de data, preço, escopo ou condição. O subpedido aguarda consentimento do consumidor sobre a alteração material.
+
+A resposta positiva autoriza a etapa seguinte de checkout. Proposta operacional: manter a disponibilidade temporariamente reservada durante uma janela de pagamento; o prazo é configurável por categoria e ainda precisa ser aprovado. A contratação definitiva ocorre somente depois da confirmação do pagamento/condição financeira e da emissão do registro contratual. Caso o pagamento não seja concluído dentro da janela, liberar a reserva temporária e avisar as partes.
+
+### 7.3. Aceitação parcial
+
+Um fornecedor pode recusar enquanto outros confirmam. O Yvenist não deve:
+- confirmar silenciosamente um evento incompleto;
+- cobrar por serviço recusado;
+- cancelar automaticamente subpedidos independentes que foram aceitos.
+
+A tela deve explicar o que foi confirmado, recusado e ainda pendente. Quando a combinação alterada afetar a viabilidade do evento (por exemplo, salão sem buffet necessário), solicitar escolha do consumidor: substituir, remover ou aguardar, conforme a dependência. O pagamento deve abranger somente os subpedidos que o consumidor escolheu contratar e que estejam confirmados.
+
+## 8. Compra imediata e checkout
+
+A compra imediata tem um carrinho próprio, separado do Party Maker.
+
+Proposta de regras:
+- a sacola reúne produtos/kits e serviços compráveis sem criar evento;
+- agrupar linhas por fornecedor e modalidade de entrega/retirada;
+- preço, quantidade, disponibilidade, prazo e taxa de entrega devem ser revalidados antes de cobrar;
+- qualquer item indisponível é removido ou corrigido com consentimento, nunca cobrado silenciosamente;
+- checkout pode ter uma única revisão/ação do consumidor, mas internamente pode gerar múltiplos pagamentos vinculados a subpedidos caso o PSP não suporte split com vários vendedores;
+- confirmação V1 só aparece após confirmação de pagamento pelo servidor/PSP;
+- o consumidor acompanha o pedido e aciona suporte no próprio pedido.
+
+Para reduzir risco no primeiro lançamento, pode-se limitar o primeiro corte a uma combinação operacional controlada (por exemplo, um fornecedor por checkout) sem excluir do modelo de dados a futura composição multi-fornecedor. Qualquer limitação dessa primeira versão deve aparecer como recorte de entrega, e não como supressão silenciosa do escopo aprovado.
+
+## 9. Pagamentos, split e repasses
+
+### 9.1. Princípio de arquitetura
+
+Usar PSP que ofereça produto marketplace, onboarding de vendedores, split/recebedores, reembolsos parciais, webhooks, conciliação e relatórios. Preferir liquidação direta aos fornecedores e retenção/dedução da comissão pelo PSP, em vez de criar uma carteira própria ou movimentar dinheiro manualmente.
+
+O Banco Central explica que marketplaces que recebem valores de compradores e repassam a vendedores participam do fluxo financeiro; a estrutura pode caracterizar atividade de subcredenciamento e atrair regras do arranjo de pagamento. Essa análise deve ser feita com PSP e assessor jurídico/regulatório antes do desenho de produção.  
+Referência: https://www.bcb.gov.br/detalhenoticia/143/noticia
+
+### 9.2. Limitação importante para múltiplos fornecedores
+
+A documentação consultada do Mercado Pago descreve o split 1:1 entre vendedor e marketplace e afirma que o split 1:N depende de carteira assessorada/contato comercial. O split 1:1 também envolve conta de vendedor com KYC exigido e OAuth para vinculação. Portanto, não presumir que um único pagamento será automaticamente dividido entre todos os fornecedores do Party Maker.
+
+Referências técnicas:
+- https://www.mercadopago.com.br/developers/pt/docs/split-payments/split-1-1/overview
+- https://www.mercadopago.com.br/developers/pt/docs/split-payments/split-1-1/prerequisites
+- https://www.mercadopago.com.br/developers/pt/docs/split-payments/split-1-1/integration-configuration/integrate-marketplace
+- https://developer.pagbank.com.br/v1/reference/split-estrutura
+
+A arquitetura Yvenist deve suportar dois caminhos sem alterar a experiência essencial:
+1. **Split nativo:** um pagamento/sessão, quando PSP contratado suportar divisão entre todos os recebedores e reembolsos proporcionais.
+2. **Pagamentos vinculados por subpedido:** uma revisão/checkout para o consumidor cria pagamentos individuais correlacionados por um `PaymentGroup`, se split 1:N não estiver disponível.
+
+O consumidor deve conseguir entender o total, os fornecedores e a situação de pagamento. Cada cobrança, estorno e repasse permanece associada ao fornecedor correto.
+
+### 9.3. Formas e agenda de pagamento
+
+Proposta de domínio:
+- compra imediata: pagamento integral no checkout como caminho padrão;
+- evento agendado: suportar termos `FULL_PREPAYMENT` ou `DEPOSIT_PLUS_BALANCE`, se o PSP, categoria, fornecedor e contrato permitirem;
+- depósito, saldo, vencimentos, parcelamento e gatilhos devem ser explícitos antes do consumidor contratar.
+
+**Não definir neste momento um percentual fixo de sinal.** Os responsáveis ainda precisam escolher a regra comercial. Fornecedor não pode mudar unilateralmente cronograma ou valor depois da contratação. Se houver parcela futura, o sistema registra vencimento, notifica, acompanha falha e aplica as regras contratuais aprovadas.
+
+### 9.4. Repasse ao fornecedor
+
+Recomendação:
+- acompanhar o valor bruto recebido, taxas PSP, comissão, estornos, ajustes e líquido previsto;
+- usar o mecanismo de split/settlement do PSP;
+- liberar repasse conforme o calendário e as regras efetivamente suportados pelo PSP, com risco de chargeback e proteção do consumidor considerados;
+- não prometer que o Yvenist retém dinheiro em escrow ou controla livremente a data de liquidação sem autorização contratual e regulatória;
+- não criar saldo de carteira do consumidor ou do fornecedor como obrigação financeira própria sem análise especializada.
+
+O painel do fornecedor deve mostrar status do pagamento, saldo estimado, motivo de retenção pelo PSP, previsão de liquidação quando disponível e histórico conciliável.
+
+## 10. Contratação e documentos
+
+O consumidor não terá uma etapa separada de “aceitar orçamento do fornecedor”. Porém, quando pagar e formalizar a contratação, deverá conhecer e aceitar os termos da compra/serviço.
+
+Para cada `SupplierSubOrder` confirmado e contratado, gerar um registro contratual imutável com:
+- identificação do consumidor e fornecedor;
+- identificação do pedido e subpedido;
+- descrição e versão dos itens/pacotes;
+- conteúdo incluído, excluído e opcionais;
+- data, horário, endereço/área e condições de acesso;
+- quantidades e requisitos do evento;
+- preço por linha, descontos, taxa, total, plano de pagamento e comissão do fornecedor;
+- condições de cancelamento, reembolso, alteração e no-show;
+- obrigações de cada parte;
+- registros de aceite, data/hora, versão dos termos e evidência de pagamento.
+
+O registro contratual pode ser uma confirmação digital estruturada e PDF/HTML para consulta; não pressupor assinatura eletrônica qualificada sem necessidade. Alterações materiais devem gerar aditivo/versionamento e aceite explícito das partes afetadas. Não editar retroativamente o snapshot original.
+
+Separar:
+- termos de uso/serviço do Yvenist;
+- contrato ou condições da prestação entre consumidor e fornecedor;
+- contrato de participação do fornecedor no marketplace;
+- recibo/registro de pagamento e repasse;
+- política de privacidade e avisos de dados.
+
+## 11. Políticas operacionais propostas
+
+### 11.1. Prazos de resposta do fornecedor
+
+Configurar `response_deadline` por categoria, urgência e antecedência do evento. Não usar o mesmo prazo para kit pronto, salão, buffet e decoração personalizada.
+
+Ao expirar:
+- nenhum silêncio equivale a aceitação;
+- o subpedido passa a `expired`;
+- consumidor recebe notificação;
+- o sistema mostra alternativas;
+- o histórico registra prazo, notificações e eventual justificativa.
+
+Definir prazos numéricos com dados de piloto e aprovação dos responsáveis.
+
+### 11.2. Cancelamento pelo consumidor
+
+Estruturar por estado e categoria:
+- **Antes do envio:** consumidor edita/exclui itens sem cobrança.
+- **Pedido enviado, sem confirmação do fornecedor:** permitir cancelamento simples da solicitação; não cobrar por parte ainda não contratada.
+- **Fornecedor confirmou, mas pagamento/contrato não concluiu:** cancelar/liberar a reserva temporária sem tratar como serviço já prestado.
+- **Depois da contratação:** aplicar termos específicos da categoria, exibidos antes do checkout, sem afastar direitos legais.
+- **Cancelamento parcial:** afetar o subpedido/linha selecionada; não cancelar automaticamente os demais fornecedores independentes.
+- **Arrependimento legal:** disponibilizar canal simples pela mesma jornada de contratação, com avaliação jurídica de aplicabilidade e tratamento de reembolso.
+
+Não fixar multa, percentual retido ou janela universal neste documento. Qualquer retenção após cancelamento exige base contratual clara, proporcionalidade, comprovação de custo quando cabível e revisão jurídica.
+
+### 11.3. Cancelamento pelo fornecedor
+
+- fornecedor informa motivo e comunica imediatamente;
+- subpedido não executado não gera comissão adquirida;
+- iniciar reembolso da parcela correspondente conforme regras e estado do PSP;
+- informar o consumidor e oferecer substituição quando viável;
+- registrar reincidência e evidências;
+- aplicar medidas graduais e revisáveis (orientação, alerta, redução temporária de exposição, suspensão de agenda ou suspensão do cadastro), com processo de contestação e exceção para eventos justificáveis.
+
+Não copiar multa do Airbnb. Qualquer penalidade financeira ao fornecedor requer aprovação conjunta, contrato claro, análise de proporcionalidade e parecer jurídico.
+
+### 11.4. Atraso, no-show e falha de qualidade
+
+Registrar horário contratado, atualizações e evidências de chegada/entrega. Para atraso, informar o consumidor e oferecer opções realistas. Para no-show do fornecedor, abrir ocorrência, proteger o consumidor e avaliar reembolso da parte não prestada. Para no-show do consumidor, aplicar apenas condições previamente contratadas e revisadas juridicamente.
+
+Não decidir disputa automaticamente com base apenas na afirmação de uma das partes.
+
+### 11.5. Alterações, reclamações e disputas
+
+- alteração de preço, escopo, data ou fornecedor exige histórico e consentimento explícito;
+- vincular chat, anexos e atendimento ao pedido/subpedido;
+- abrir disputa formal separada do atendimento comum;
+- indicar prazo, responsável, evidências solicitadas e próximo passo;
+- permitir resolução parcial por fornecedor sem apagar o evento inteiro;
+- preservar logs de decisão e reembolso;
+- tratar chargeback conforme regras do PSP e fornecer evidências do contrato, aceite, comunicação e prestação.
+
+## 12. Dados, transparência e proteção do consumidor
+
+O CDC trata, entre outros temas, de conhecimento prévio do contrato, interpretação favorável ao consumidor, direito de arrependimento em contratações fora do estabelecimento e cláusulas abusivas. O Decreto 7.962/2013 trata de informações claras na contratação eletrônica, atendimento e mecanismos para exercício do direito de arrependimento. A aplicação concreta a serviços agendados, itens personalizados, produtos perecíveis, pacotes e eventos deve ser analisada por advogado brasileiro; não criar uma exceção genérica por conta própria.
+
+Referências:
+- https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
+- https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm
+
+O fato de os responsáveis desejarem que consumidor e fornecedor vejam suas identidades desde o início não autoriza expor dados desnecessários. Definir quais dados de perfil e contato são exibidos em cada estágio; cumprir finalidade, necessidade, transparência e segurança segundo a LGPD.
+
+Referências:
+- https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html
+- https://www.gov.br/cti/pt-br/acesso-a-informacao/lei-geral-de-protecao-de-dados
+
+## 13. Decisões que ainda exigem aprovação conjunta
+
+A direção de receita já foi aprovada; os valores e condições abaixo ainda não:
+
+| ID | Decisão | Minha recomendação inicial | Estado |
+|---|---|---|---|
+| COM-01 | Comissão piloto | 10% sobre base comissionável por subpedido concluído | PENDENTE |
+| COM-02 | Base de comissão | Linhas concluídas após desconto financiado pelo fornecedor; demais componentes segregados e revisados | PENDENTE |
+| COM-03 | Taxa do PSP | Transparente e separada; decidir se Yvenist absorve ou deduz do repasse | PENDENTE |
+| PAY-02 | Pagamento de evento | Após confirmação dos fornecedores; suportar pagamento integral e deixar depósito/saldo habilitado por política aprovada | PENDENTE |
+| PAY-03 | Janela de reserva após aceite do fornecedor | Janela temporária por categoria, expirando sem pagamento | PENDENTE |
+| OPS-01 | SLA de fornecedor | Configurar por categoria e urgência; determinar números após piloto | PENDENTE |
+| OPS-02 | Cancelamento do consumidor | Regra por etapa/categoria, respeitando direitos legais; sem multa padrão | PENDENTE |
+| OPS-03 | Cancelamento do fornecedor | Reembolso da parte não prestada, medidas graduais e justificativa/contestação | PENDENTE |
+| OPS-04 | Gatilho de conclusão | Confirmação do consumidor ou evidência/timeout de resolução definido por categoria | PENDENTE |
+| PAY-04 | Liquidação e repasse | Split pelo PSP e calendário do provedor; sem custódia própria presumida | PENDENTE |
+| ADS-01 | Exposição patrocinada | Posições limitadas, identificadas e elegibilidade antes da promoção | PENDENTE |
+| SUB-01 | Assinatura de consumidores | Fora do MVP; benefícios e preço serão definidos depois | FUTURO |
+
+## 14. Critérios de aprovação para entrar em produção
+
+Não habilitar transações reais até que:
+1. os responsáveis aprovem COM-01 a PAY-04 e OPS-01 a OPS-04;
+2. advogado revise contratos, cancelamentos, direito de arrependimento, responsabilidades e identidade do marketplace;
+3. contador valide emissão fiscal, base de comissão, tributos, conciliação e repasses;
+4. PSP confirme por contrato e documentação a configuração multi-vendedor, split, reembolso parcial, chargeback e agenda de liquidação;
+5. fornecedor complete onboarding/KYC aplicável;
+6. consumidor veja preço total, condições e termos antes de pagar;
+7. testes em sandbox cubram pagamento aprovado/recusado/pendente, webhook duplicado, estorno total/parcial, chargeback e fornecedor desconectado;
+8. suporte/backoffice consigam localizar pedido, subpedido, pagamento, contrato, repasse e disputa.
+
+## 15. Fontes e limitações
+
+Fontes consultadas em 2026-11-18. Conteúdo de terceiros é referência de mecanismo, não aconselhamento jurídico, contábil ou autorização para operar serviço de pagamento. Taxas, APIs, elegibilidade e políticas comerciais podem mudar; revalidar diretamente com o PSP antes de escolher fornecedor ou implementar integração.
