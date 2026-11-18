@@ -14,10 +14,12 @@ Governança central do projeto: framework de criação, decisões, autoridade, p
 - `DECISION_AUTHORITY_AND_RACI.md` — modelo de autoridade por papel; nomes e alçadas individuais permanecem `UNASSIGNED`.
 - `DOCUMENT_OWNERSHIP_AND_BOUNDARIES.md` — fonte de verdade, limites e prevenção de duplicidades.
 - `EXTERNAL_STANDARDS_AND_REFERENCE_BASELINE.md` — referências, estados e regras de atualização.
+- `PRODUCT_CREATION_FRAMEWORK.md` v0.1 — base oficial de trabalho aprovada pelos responsáveis.
+- `OWNER_DECISION_RECORD_2026-11-18.md` e `OWNER_CONFIRMATION_REGISTER_2026-11-18.md` — decisões e pendências conjuntas.
 
-## Próximo documento
+## Próxima frente de governança
 
-`PRODUCT_CREATION_FRAMEWORK.md` é o próximo documento oficial a ser elaborado. Os demais documentos listados em `BLUEPRINT_ARCHITECTURE.md` serão produzidos progressivamente, sem arquivos vazios.
+Fechar as decisões conjuntas do modelo comercial e manter o RACI individual em aberto até a designação dos responsáveis por domínio.
 
 ## Regra de governança
 
