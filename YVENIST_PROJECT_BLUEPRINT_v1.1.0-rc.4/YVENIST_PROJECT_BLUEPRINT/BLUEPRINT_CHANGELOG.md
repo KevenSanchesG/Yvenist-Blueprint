@@ -19,11 +19,11 @@
 - No legal/contractual terms approved for production.
 - No target app source code changed.
 - No Figma frames edited.
-- No ZIP release or merge from a feature branch; documentation was committed directly to main.
+- The preparation branch was fast-forwarded into main; follow-up specifications were then committed directly on main. No PR merge commit or ZIP release was created.
 
 ---
 
-# BLUEPRINT CHANGELOG
+---
 
 ## Working-branch update — joint owner decisions and product-flow clarification (2026-11-18)
 
@@ -54,7 +54,7 @@
 
 ---
 
-# BLUEPRINT CHANGELOG
+---
 
 ## v1.1.0-rc.3 — revisão técnica e teste do addendum multi-sessão (17/11/2026)
 
@@ -108,7 +108,7 @@ O pacote `1.1.0-rc.3` está pronto para piloto controlado, não para ativação 
 
 ---
 
-# BLUEPRINT CHANGELOG
+---
 
 ## Addendum multi-sessão 0.2 — revisão de comunicação e handoff (17/11/2026)
 
