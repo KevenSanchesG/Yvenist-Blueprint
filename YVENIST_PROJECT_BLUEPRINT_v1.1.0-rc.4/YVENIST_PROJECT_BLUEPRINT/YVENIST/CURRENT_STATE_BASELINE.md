@@ -82,3 +82,22 @@ Legal/corporate status, named approval authorities, active suppliers, active reg
 4. Separate observation, repository documentation, human report and inference.
 5. Do not store credentials, tokens, private keys or unnecessary personal data.
 6. Preserve prior snapshots where history matters.
+
+
+## 9. Joint owner decisions received on 2026-11-18
+
+A joint owner response now confirms the following product/design direction: primary brand color `#FF5637` (superseding the former `#FF6B00`); approved three-screen hybrid; Plus Jakarta Sans; Material Icons with the current mapping approved but revisable; no existing app icon selected; design foundation tokens approved as a baseline for iterative refinement; card scores represent customer ratings; and motion/performance review intended as a design approval gate.
+
+Party Maker decisions: supplier-defined fixed prices vary by event/party type; totals update as items are added or removed; one event request is submitted with individual supplier alerts/sub-requests; date and guest count are conditionally required by category/supplier; empty events are deleted after a warning; suppliers confirm availability/fulfilment instead of requiring a consumer quote-acceptance step; identities are visible from the start; forms are category-specific; and suppliers may sell kits/bundles and independent services/items.
+
+Payments and contracting are included in MVP scope. All previously listed functional areas are intended to be in MVP scope, subject to explicit dependency-based sequencing. The owners also clarified that immediate purchases require a standard cart/checkout path distinct from Party Maker.
+
+The owners' live edits during the ongoing Figma flow must be preserved. The live Figma snapshot inspected on this date still includes older `#FF6B00` and earlier V1/V2 confirmation labels in some places; the new owner decisions supersede those historical labels and require a controlled design/token reconciliation. Figma version history remains unverified.
+
+See:
+- `00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_DECISION_RECORD_2026-11-18.md`
+- `23_INTEGRATION_AND_HANDOFF/CUSTOMER_FLOWS_AND_PARTY_MAKER_RULES_2026-11-18.md`
+- `23_INTEGRATION_AND_HANDOFF/MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md`
+- `23_INTEGRATION_AND_HANDOFF/VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md`
+
+This section records human-reported decisions and does not assert that the Figma file or Flutter application has already been updated.
