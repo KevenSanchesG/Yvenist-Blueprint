@@ -2,7 +2,7 @@
 
 **Architecture baseline:** 1.0.0 — APPROVED_AS_WORKING_ARCHITECTURE  
 **Imported source package:** 1.1.0-rc.4  
-**Working branch:** docs/phase-1-close-2026-11-18  
+**Working branch:** main (the preparation branch is retained as history)  
 **Phase 1:** CLOSED_WITH_SCOPED_PENDENCIES  
 **Multi-session addendum:** 0.3 — APPROVED_FOR_PILOT / OPERATIONAL_PILOT_PENDING  
 **Product Creation Framework:** 0.1 — APPROVED_AS_OFFICIAL_WORKING_BASELINE  
@@ -40,11 +40,11 @@
 
 - Reconcile new owner decisions with the latest live Figma file while preserving ongoing owner edits; update color, token roles, icon exploration and V1/V2 confirmation semantics. Figma version history is still unverified.
 - Refine design tokens for contrast, dark/light themes, states, density, motion and accessibility.
-- Define supplier price matrices, supplier sub-order/partial-confirmation state machine and conditional date/guest requirements.
+- Define the category/supplier price matrix, concrete partial-acceptance/dependency rules and conditional date/guest requirements.
 - Design the empty-event delete warning and recovery/undo behavior.
-- Create a standard immediate-purchase cart and checkout separate from Party Maker.
+- Turn the documented immediate-purchase cart/checkout into design and implementation slices.
 - Specify customer-rating eligibility, aggregation, moderation and verified-review rules.
-- Obtain joint approval for commercial proposal: commission rate/calculation, paid placements, subscription and operating policies.
+- Obtain joint approval for commercial parameters in the approval sheet: commission base/rate, PSP fee allocation, payment schedule, supplier hold/SLA, cancellation, completion and payout.
 - Obtain legal/accounting/privacy/payment-provider review before live transactions.
 - Assign technical/operational RACI owners and qualified specialist reviewers.
 - Inspect local project folder, Git remotes, branch, HEAD and working-tree state on Rafael's computer.
@@ -53,7 +53,7 @@
 
 ## Next phase
 
-Start Phase 2 with the operating/business model and product/service journeys. Preserve the owners' ongoing Figma flow changes as live design input, and sequence MVP delivery into complete vertical slices without silently dropping approved scope.
+Continue Phase 2 by closing the joint commercial approval sheet, validating the payment provider and converting the transaction state model into prioritized implementation slices. Preserve the owners' ongoing Figma flow changes as live design input, and sequence MVP delivery into complete vertical slices without silently dropping approved scope.
 
 
 ## Commercial model and transaction lifecycle — active work
