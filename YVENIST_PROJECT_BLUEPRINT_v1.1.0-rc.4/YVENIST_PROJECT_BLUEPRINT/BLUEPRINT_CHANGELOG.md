@@ -1,5 +1,36 @@
 # BLUEPRINT CHANGELOG
 
+## Working-branch update — joint owner decisions and product-flow clarification (2026-11-18)
+
+### Confirmed by both owners
+- Primary brand color changed to #FF5637, superseding the previous #FF6B00 direction.
+- Three-screen hybrid direction and Plus Jakarta Sans confirmed.
+- Material Icons/current mapping approved, with future revision permitted.
+- New app-icon explorations requested; no existing icon is selected.
+- Foundation tokens accepted as baseline for iterative refinement.
+- Listing-card rating defined as customer rating.
+- Motion/performance evaluation requested as a design approval gate.
+- Party Maker rules PM-20–PM-26 clarified; supplier-specific sub-orders/notifications and supplier availability confirmation replace consumer quote acceptance.
+- Immediate purchase cart/checkout is distinct from Party Maker; V1/V2 confirmation semantics clarified.
+- Payments/contracting and previously listed functional capabilities retained in intended MVP scope.
+- Product Creation Framework v0.1 approved as official working basis.
+- Strategic/commercial decisions require both owners; technical/operational decisions go through designated accountable owners.
+
+### Added/updated
+- Dated owner decision record and refreshed owner confirmation register.
+- Party Maker and immediate checkout flow specification.
+- Proposal for commission, paid placements, cancellations/refunds, supplier fulfilment and disputes; still awaiting joint commercial approval and specialist review.
+- Visual asset and motion production pipeline; Rive, Lottie and Blender toolchain recommendations with an Android device quality gate.
+- Baseline, progress, release manifest, audit report and integration index updated.
+
+### Not approved by this update
+- Specific commission rate, cancellation penalties, refund windows, supplier SLAs, payment-provider choice, consumer membership benefits or any final legal/contractual text.
+- Actual Figma edits, target-app code changes, local environment changes, package release or merge to main.
+
+---
+
+# BLUEPRINT CHANGELOG
+
 ## v1.1.0-rc.3 — revisão técnica e teste do addendum multi-sessão (17/11/2026)
 
 ### Corrigido
