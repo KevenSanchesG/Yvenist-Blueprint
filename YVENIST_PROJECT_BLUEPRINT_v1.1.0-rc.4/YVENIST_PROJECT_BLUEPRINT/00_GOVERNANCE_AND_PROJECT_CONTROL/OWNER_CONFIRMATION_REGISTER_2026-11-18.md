@@ -66,3 +66,17 @@ Before real transactions, obtain Brazilian legal, accounting/tax, privacy and pa
 ## 5. Source and authority rule
 
 For every decision, retain its exact wording, approving owners, date, rationale, affected flows/data/policies, evidence, implementation impact and review trigger. Strategic and commercial decisions require both owners. Technical/operational decisions are approved by the assigned accountable person once the RACI is named. Do not infer approval from a mockup, source code, payment-provider capability or AI recommendation.
+
+
+## 6. Commercial model and contracting cycle — follow-up specification
+
+The owners approved the revenue direction, but not the concrete values/policies. The following details are now documented in:
+- `23_INTEGRATION_AND_HANDOFF/MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` — proposal v0.2;
+- `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed state model;
+- `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint approval sheet.
+
+Still requiring both owners: pilot commission rate (10% is a recommendation only), commissionable base, allocation of PSP fees, event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
+
+The architecture recommendation is one PaymentGroup checkout experience with either native PSP split for multiple receivers or separate correlated PaymentIntents per supplier sub-order. Provider selection and multi-receiver eligibility must be validated before production.
+
+The documents are proposals, not final contracts or active financial policy. Legal, accounting and PSP review are launch gates.
