@@ -26,3 +26,12 @@ Decisões humanas, documentos de referência, execução do Claude e validaçõe
 ## Fontes oficiais declaradas
 
 `SOURCE_REGISTER.md` mantém o registro dos endereços oficiais informados pelos responsáveis, seus domínios de autoridade e o estado de acesso/verificação. O registro não presume que GitHub ou Figma já foram autenticados ou auditados.
+
+
+## Owner decisions and creation framework
+
+- `OWNER_DECISION_RECORD_2026-11-18.md` — joint owner decisions received on 2026-11-18.
+- `OWNER_CONFIRMATION_REGISTER_2026-11-18.md` — confirmed items and remaining follow-up.
+- `PRODUCT_CREATION_FRAMEWORK.md` v0.1 — approved by both owners as the official working basis on 2026-11-18.
+
+Strategic and commercial decisions require both owners. Technical and operational decisions follow designated accountable people; individual assignments remain pending.
