@@ -1,3 +1,16 @@
+## Local launch and COM-01 finalization — jointly approved working rules (2026-11-18)
+
+- Recorded joint owner agreement, as reported by Keven, to formalize COM-01 and the Campo Grande / Zona Oeste local launch strategy.
+- Set the first cohort target at 20 distinct active Founding Partners; four priority categories with five suppliers each: spaces/venues, buffet/food, decoration/rental, confectionery/sweets/party kits.
+- Defined Campo Grande as the initial demand nucleus; broader Zona Oeste coverage is enabled per actual supplier service area and category density.
+- Updated COM-01 to 3% for 12 months from the first completed supplier transaction; 5% only after the 12-month minimum plus category/area expansion gates; 10% only after maturity gates and joint review.
+- Defined internal liquidity, activation, response, retention, cancellation and unit-economics gates; metrics are internal pilot thresholds, not universal industry benchmarks.
+- Defined 60-day notice, reminders at 30 and 7 days, explicit acceptance, prospective-only rate changes and no retroactivity.
+- Added `LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md` and updated owner records, approval sheet, commercial proposal, README index, progress and release manifest.
+- Payment production remains blocked pending COM-02/COM-03, legal/accounting review and PSP sandbox verification; no target app code or Figma frames modified.
+
+---
+
 # BLUEPRINT CHANGELOG
 
 ## COM-01 — proposta híbrida de lançamento submetida à aprovação conjunta (2026-11-18)
