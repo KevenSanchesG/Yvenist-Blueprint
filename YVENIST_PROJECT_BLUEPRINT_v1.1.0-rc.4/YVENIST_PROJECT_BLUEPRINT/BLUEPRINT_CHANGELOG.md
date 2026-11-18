@@ -1,5 +1,14 @@
 # BLUEPRINT CHANGELOG
 
+## COM-01 — proposta híbrida de lançamento submetida à aprovação conjunta (2026-11-18)
+
+- Formalizada a proposta de Keven: 3% para Parceiros Fundadores no lançamento, 5% na expansão e 10% como taxa-alvo de maturidade.
+- Comissão paga pelo fornecedor e calculada por subpedido concluído; sem mensalidade obrigatória de entrada proposta para o MVP.
+- Criado documento específico com programa de fundadores, elegibilidade, coorte, benefícios, métricas, progressão, transparência e salvaguardas.
+- Atualizados folha de aprovação, proposta comercial, registro de decisões, registro de confirmação e progresso.
+- Status permanece PROPOSTA / AGUARDANDO APROVAÇÃO DE RAFAEL; não ativar taxa ou transição automaticamente. Nenhuma política comercial final foi aprovada por esta atualização.
+
+
 ## Main update — commercial model and transaction lifecycle (2026-11-18)
 
 ### Added and expanded directly in main
