@@ -63,3 +63,13 @@ Continue Phase 2 by closing the joint commercial approval sheet, validating the 
 - Added `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` so Keven and Rafael can decide remaining commercial parameters together.
 - COM-01 refined into a formal hybrid launch proposal submitted by Keven: 3% Founding Partner launch rate, 5% expansion rate and 10% maturity target; supplier-paid per completed sub-order. Awaiting Rafael's joint approval; thresholds and transition criteria remain open.
 - `main` now contains the previously prepared 27-commit phase-1 work; this update continues directly on `main`.
+
+
+## Local launch and COM-01 — joint decisions (2026-11-18)
+
+- COM-01 progressive commission and Founding Partner program recorded as jointly approved business rule: 3% for 12 months from first completed transaction; 5% after category/area expansion gate; 10% after maturity gate and joint review.
+- Transition requires 60 calendar days' advance notice, reminders at 30 and 7 days, explicit supplier acceptance, prospective-only application and no retroactive change.
+- Local pilot: Campo Grande / Zona Oeste, with Campo Grande as initial demand nucleus and geographic enablement based on actual provider service coverage.
+- First supply cohort target: 20 distinct active Founding Partners across four families, target five per family: venues, buffet/food, decoration/rental, confectionery/sweets/party kits.
+- Created local market launch plan and updated commission policy with measurement definitions, internal phase gates, supplier safeguards and Claude Code constraints.
+- Production collection remains blocked pending COM-02/COM-03, legal/accounting/PSP review and payment sandbox validation.
