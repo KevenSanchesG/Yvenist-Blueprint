@@ -75,7 +75,9 @@ The owners approved the revenue direction, but not the concrete values/policies.
 - `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed state model;
 - `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint approval sheet.
 
-Still requiring both owners: pilot commission rate (10% is a recommendation only), commissionable base, allocation of PSP fees, event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
+Still requiring both owners: **COM-01 progressive commission proposal (3% Founding Partner launch / 5% expansion / 10% maturity target, submitted by Keven; awaiting Rafael's approval)**, commissionable base, allocation of PSP fees, event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
+
+The detailed COM-01 proposal is in `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. It must not be treated as approved policy until both owners explicitly approve the same version.
 
 The architecture recommendation is one PaymentGroup checkout experience with either native PSP split for multiple receivers or separate correlated PaymentIntents per supplier sub-order. Provider selection and multi-receiver eligibility must be validated before production.
 
