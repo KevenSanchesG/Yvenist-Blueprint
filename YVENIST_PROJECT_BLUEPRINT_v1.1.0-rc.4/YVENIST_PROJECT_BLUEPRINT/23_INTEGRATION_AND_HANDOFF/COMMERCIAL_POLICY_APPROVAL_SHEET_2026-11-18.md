@@ -13,12 +13,18 @@ Esta folha contém somente decisões que ainda precisam dos dois responsáveis. 
 
 | ID | Decisão necessária | Recomendação para começar | Resposta dos responsáveis |
 |---|---|---|---|
-| COM-01 | Taxa de comissão piloto | 10% por subpedido concluído, paga pelo fornecedor | PENDENTE |
+| COM-01 | Comissão progressiva e programa de lançamento | Modelo híbrido proposto: 3% para Parceiros Fundadores no lançamento; 5% na fase de expansão; 10% como taxa-alvo de maturidade. Comissão paga pelo fornecedor, somente sobre subpedido concluído. Critérios, duração, transição e elegibilidade sujeitos à aprovação conjunta | PROPOSTA DE KEVEN PARA APROVAÇÃO DE KEVEN + RAFAEL |
 | COM-02 | Base comissionável | Valor das linhas concluídas após descontos financiados pelo fornecedor; frete, tributos, montagem/deslocamento e terceiros discriminados para análise contábil | PENDENTE |
 | COM-03 | Taxa do PSP | Deduzir do repasse do fornecedor, separada da comissão e claramente exibida, se a viabilidade econômica e o contrato permitirem | PENDENTE |
 | COM-04 | Comissão em reembolso parcial | Recalcular e reverter proporcionalmente à parcela reembolsada/não concluída | PENDENTE |
 | ADS-01 | Exposição patrocinada | Poucas posições por categoria/região, etiqueta Patrocinado, elegibilidade e relevância antes do pagamento | PENDENTE |
 | SUB-01 | Assinatura do consumidor | Fora do lançamento; definir benefícios, preço e prioridade apenas após acordo com fornecedores | PENDENTE / FUTURO |
+
+### COM-01 — proposta detalhada para deliberação conjunta
+
+A proposta submetida por Keven é um modelo híbrido de entrada e maturidade: **3% na fase de lançamento para Parceiros Fundadores; 5% na fase de expansão; 10% como taxa-alvo na operação madura**. A cobrança é do fornecedor, por subpedido concluído. Não há aprovação final até Rafael confirmar a mesma versão.
+
+Documento normativo proposto: `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. Ele define elegibilidade, benefícios não financeiros, coorte, prazo, transição, comunicação, métricas e salvaguardas. Os critérios quantitativos de expansão e maturidade continuam deliberadamente sujeitos à validação dos dois sócios, para não criar gatilhos automáticos sem dados do piloto.
 
 ## B. Confirmação, contratação e pagamento
 
