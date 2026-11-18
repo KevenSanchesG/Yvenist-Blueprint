@@ -1,0 +1,19 @@
+# Local Claude Code settings (machine-specific)
+.claude/settings.local.json
+
+# Secrets and local environment files — never commit real values
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local logs and temporary files
+*.log
+.tmp/
+.temp/
+
+# Claude Desktop Code local worktrees (machine/session working copies)
+.claude/worktrees/
