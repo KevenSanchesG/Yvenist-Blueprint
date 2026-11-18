@@ -5,7 +5,7 @@
 **Owners:** Keven and Rafael.  
 **Purpose:** track what the owners have decided, what remains a proposal, and what still requires evidence or specialist review.
 
-> This register supersedes the unanswered-status snapshot in the initial audit. The dated decision record is the detailed source of truth: `00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_DECISION_RECORD_2026-11-18.md`. Do not keep treating PM-20–PM-26, the brand confirmations or the Product Creation Framework as unanswered. Do not promote proposals in the commercial/operations documents to approved policy.
+> This register supersedes the unanswered-status snapshot in the initial audit. The dated decision record is the detailed source of truth: `00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_DECISION_RECORD_2026-11-18.md`. Do not keep treating PM-20–PM-26, brand confirmations, Product Creation Framework, COM-01 or COM-02 as unanswered. Only the specifically approved policy versions are approved; do not promote the remaining commercial/operations proposals to approved policy.
 
 ## 1. Confirmed owner decisions
 
@@ -32,7 +32,7 @@
 | FLOW-01 | In the Direction page, layer 11 / item 3, V1 becomes the confirmation for an immediate order whose payment has completed; V2 remains the confirmation for a quote/request submitted from Party Maker. | CONFIRMED — Figma frame update/reconciliation pending |
 | FLOW-02 | Immediate purchases (e.g. a snack kit) need a conventional cart/checkout path separate from Party Maker event composition. | CONFIRMED_NEED / visual solution to be designed |
 | BIZ-01 | Revenue streams: commission on completed bookings/transactions; paid priority placement in contextual Explore results; a consumer subscription may be introduced later with benefits to be designed. | CONFIRMED_DIRECTION |
-| BIZ-02 | Supplier commission is percentage-based on the contracted value. | CONFIRMED_DIRECTION — rate, calculation base and payout rules remain open |
+| BIZ-02 | Supplier commission is percentage-based and applied per supplier sub-order on the completed, commissionable remuneration defined by COM-02. | COM-01 AND COM-02 APPROVED AS INTERNAL BUSINESS RULES; PSP allocation and operational details remain open |
 | SCOPE-01 | All capabilities listed in the prior MVP scope question are intended to be included in the MVP scope. | CONFIRMED_SCOPE_INTENT — sequence into deliverable slices; do not silently remove capabilities |
 | ENV-01 | Rafael's development environment is Windows native; Claude Code is used via terminal. | CONFIRMED |
 | ENV-02 | Local repository path is not yet known; two Claude sessions are only probable; Figma version history has not yet been inspected by the owners. | OPEN / TO VERIFY |
@@ -59,7 +59,7 @@ Figma file: `Yvenist_v0`, key `G2QX9NnDe8gJOnTrFUw1jH`. Version history is still
 
 ## 4. Commercial, operational, legal and financial review
 
-`MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` contains proposals for commissions, cancellations, refunds, no-shows, disputes, supplier SLAs, service fulfilment and payment settlement. These are NOT yet policy approvals.
+`MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` contains the operating model and the remaining proposals. COM-01 v0.2 and COM-02 v1.0 are approved internal business rules in their dedicated policy documents; cancellation/refund details, no-shows, disputes, supplier SLAs, service fulfilment and payment settlement are not thereby approved.
 
 Before real transactions, obtain Brazilian legal, accounting/tax, privacy and payment-provider review. In particular, review consumer cancellation/withdrawal rights, supplier contract terms, payment split/settlement, chargebacks, refunds and any proposed cancellation consequences.
 
@@ -75,9 +75,9 @@ The owners approved the revenue direction, but not the concrete values/policies.
 - `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed state model;
 - `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint approval sheet.
 
-COM-01 is jointly approved as a business rule on 2026-11-18: 3% Founding Partner for 12 months after first completed transaction; 5% only after the category/area Expansion gate and notice/express acceptance; 10% only after the Maturity gate and joint review. Initial local supply target is 20 active founding suppliers across four families, in Campo Grande / Zona Oeste. Detailed thresholds and policy are in the commission and local launch plans. Still requiring both owners: commissionable base (COM-02), PSP fee allocation (COM-03), event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing.
+COM-01 is jointly approved as a business rule on 2026-11-18: 3% Founding Partner for 12 months after first completed transaction; 5% only after the category/area Expansion gate and notice/express acceptance; 10% only after the Maturity gate and joint review. Initial local supply target is 20 active founding suppliers across four families, in Campo Grande / Zona Oeste. Detailed thresholds and policy are in the commission and local launch plans. Still requiring both owners: PSP fee allocation (COM-03), detailed refund/reversal treatment (COM-04), event payment schedule, temporary availability hold, supplier response deadlines, category cancellation windows, supplier cancellation consequences, completion trigger/payout timing and sponsored-placement pricing. COM-02 base and discount funding are approved as internal rules, subject to specialist validation before production.
 
-The detailed COM-01 proposal is in `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. It must not be treated as approved policy until both owners explicitly approve the same version.
+The detailed COM-01 policy is in `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`; it is jointly approved as an internal business rule. COM-02 v1.0 is documented in `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md` and is also jointly approved. Neither approval substitutes for specialist review or authorizes production collection.
 
 The architecture recommendation is one PaymentGroup checkout experience with either native PSP split for multiple receivers or separate correlated PaymentIntents per supplier sub-order. Provider selection and multi-receiver eligibility must be validated before production.
 
@@ -96,3 +96,10 @@ Keven informou expressamente que Rafael está de acordo com as definições docu
 - Campo Grande / Zona Oeste como geografia inicial, com Campo Grande como núcleo de aquisição e expansão por área de atendimento comprovada.
 
 Os thresholds são metas internas de gestão do piloto, não benchmarks universais. Ver os dois documentos normativos listados no approval sheet.
+
+
+## 8. COM-02 — confirmação conjunta (2026-11-18)
+
+Keven e Rafael aprovaram a versão 1.0 da regra comercial de base comissionável e descontos. A remuneração do fornecedor pela parte concluída é a referência; descontos suportados pelo fornecedor reduzem a base, enquanto parcelas da plataforma/parceiro somente preservam a remuneração quando efetivamente compensadas ao fornecedor. Promoções cofinanciadas devem registrar suas parcelas. Serviços próprios integram a remuneração; repasses de terceiros exigem separação e comprovação; tributos não são automaticamente excluídos. COM-03 e COM-04 permanecem pendentes, e produção depende de revisão jurídica/contábil e homologação do PSP.
+
+Documento normativo: `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`.
