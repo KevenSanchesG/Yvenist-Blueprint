@@ -1,7 +1,7 @@
 # CICLO DE PEDIDO, CONTRATAÇÃO, PAGAMENTO E REPASSE — MODELO DE DOMÍNIO v0.1
 
 **Data:** 2026-11-18  
-**Status:** ESPECIFICAÇÃO TÉCNICA PROPOSTA / AGUARDANDO APROVAÇÃO COMERCIAL E ESPECIALIZADA  
+**Status:** MODELO TÉCNICO PROPOSTO; COM-02 APROVADA COMO REGRA COMERCIAL INTERNA / OUTRAS DECISÕES E REVISÃO ESPECIALIZADA PENDENTES  
 **Decisões de origem:** PM-20 a PM-26, PAY-01, FLOW-01 e FLOW-02  
 **Documento comercial:** `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md`
 
@@ -221,6 +221,20 @@ CommissionEntry:
 - `REVERSED`
 - `DISPUTED`
 
+Campos financeiros mínimos do CommissionEntry conforme COM-02:
+- `supplier_sub_order_id` e identificadores das linhas concluídas;
+- `commission_policy_version` e `rate_applied` congelados no snapshot;
+- `commissionable_amount_cents` e `commission_amount_cents`;
+- memória de cálculo: remuneração concluída do fornecedor, descontos suportados pelo fornecedor, subsídios promocionais creditados ao fornecedor, reversões/reembolsos que afetem sua remuneração e repasses documentados a terceiros;
+- moeda, método de arredondamento, timestamps e referências imutáveis de pagamento, promoção, contrato e evidência de conclusão.
+
+Registros promocionais relacionados:
+- `PromotionApplication`: regra, vigência, elegibilidade, financiadores, valor total, limites e versão/aceite da campanha;
+- `PromotionAllocation`: alocação por linha do subpedido, discriminando a parte financiada pelo fornecedor e as parcelas efetivamente financiadas/compensadas pela plataforma ou parceiro de pagamento;
+- `ThirdPartyPassThrough`: valor, terceiro independente, documento/evidência, subpedido/linha e confirmação de que não há margem/remuneração do fornecedor embutida.
+
+A apuração considera a remuneração efetivamente devida ao fornecedor pela parte concluída, antes da comissão Yvenist e da taxa PSP. Não confundir comissão com valor líquido depositado após custos do PSP.
+
 PayoutRecord:
 - `NOT_SCHEDULED`
 - `SCHEDULED`
@@ -280,6 +294,10 @@ Cada refund deve apontar para PaymentIntent, subpedido e linhas afetadas. Cada d
 - `RefundSubmitted`
 - `RefundSucceeded`
 - `DisputeOpened`
+- `PromotionApplied`
+- `PromotionFundingAllocated`
+- `CommissionBasisCalculated`
+- `CommissionBasisAdjusted`
 - `CommissionEarned`
 - `PayoutScheduled`
 - `PayoutSucceeded`
@@ -298,6 +316,9 @@ Cada evento precisa de ID, agregado, versão, timestamp UTC, ator, correlation I
 8. Uma operação de reembolso não apaga o pagamento original; cria evento/registro correlacionado.
 9. Eventos financeiros e logs de aceite devem ser auditáveis.
 10. Comissão adquirida é calculada apenas conforme base e regra comercial aprovadas.
+13. Cada desconto promocional precisa ter fonte de financiamento e alocação auditáveis; a etiqueta da campanha não substitui a conciliação do valor devido ao fornecedor.
+14. Desconto de um fornecedor não pode reduzir a base de outro subpedido; subsídio da plataforma só preserva a remuneração se efetivamente compensar o fornecedor.
+15. A taxa PSP permanece separada da base e da comissão até decisão COM-03; tributos não são excluídos automaticamente pela COM-02.
 11. Pedido parcialmente atendido não deve ser rotulado como integralmente concluído.
 12. O cliente sempre vê valores, fornecedor, status e próximos passos antes de pagar.
 
@@ -316,12 +337,15 @@ Claude não deve começar a construir checkout final apenas com base nas telas. 
 - cancelamento total e parcial;
 - reembolso total e parcial;
 - comissões calculadas, adquiridas e revertidas;
+- promoções financiadas pelo fornecedor, pela plataforma e de forma cofinanciada, incluindo conferência entre desconto divulgado, alocação e valor efetivamente devido ao fornecedor;
+- cupom de pedido em vários fornecedores sem transferência indevida de descontos entre subpedidos;
+- snapshot de base comissionável, memória de cálculo e ajuste/reversão auditável;
 - payout atrasado/falhado/retido pelo PSP;
 - disputa e chargeback;
 - testes automatizados e trilha de auditoria;
 - fluxo completo no sandbox antes de habilitar produção.
 
-Este documento é modelo proposto. A aprovação comercial e o parecer especializado devem anteceder a configuração de produção e qualquer cobrança real.
+Este documento continua sendo modelo técnico proposto. A regra comercial da base e dos descontos (COM-02) está aprovada como política interna; a taxa PSP (COM-03), reembolso/cancelamento (COM-04), contratação e demais parâmetros seguem suas próprias aprovações. Parecer especializado e homologação devem anteceder qualquer configuração financeira em produção ou cobrança real.
 
 
 ## 16. Visual flow diagrams for implementation planning
