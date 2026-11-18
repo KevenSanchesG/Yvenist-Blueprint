@@ -5,7 +5,7 @@
 **Working branch:** main (preparation branch retained as history)  
 **Working delta status:** PHASE_1_CLOSED_WITH_SCOPED_PENDENCIES  
 **Product Creation Framework:** 0.1 — APPROVED_AS_OFFICIAL_WORKING_BASELINE  
-**Owner decisions:** joint responses recorded 2026-11-18; COM-01 and local pilot plan approved as working business rules; COM-02/COM-03 and other transaction policies remain pending.
+**Owner decisions:** joint responses recorded 2026-11-18; COM-01 and COM-02 approved as working business rules; COM-03/COM-04 and other transaction policies remain pending.
 
 ## Version identity
 
@@ -44,7 +44,9 @@
 - `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md` — COM-01 v0.2, jointly approved as business policy: 3% for 12 months after first completed transaction, 5% after expansion gates, 10% after maturity gates; 60-day notice and express acceptance.
 - `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — COM-01 marked jointly approved; other commercial/payment items remain pending.
 
-COM-01 approval does not authorize production charges. COM-02 commissionable base, COM-03 PSP fee allocation, legal/accounting review and PSP sandbox remain launch gates.
+COM-01 and COM-02 approval do not authorize production charges. COM-03 PSP fee allocation, COM-04 refund treatment, legal/accounting review and PSP sandbox remain launch gates.
+
+- 23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md — COM-02 v1.0, jointly approved commissionable base and seller/platform/co-funded discount rules, pending specialist review before production.
 
 ## Package safety
 
@@ -72,6 +74,13 @@ The following documents are now in main:
 - `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed technical/domain state machine.
 - `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — decisions requiring both owners.
 
-These are specifications and recommendations. The commission rate, commissionable base, PSP fee allocation, event payment schedule, temporary supplier hold, deadlines, final cancellation rules, payout trigger and sponsored-placement pricing are not approved yet.
+COM-01 and COM-02 are approved as internal working business rules in their dedicated policy documents. PSP fee allocation, event payment schedule, temporary supplier hold, deadlines, final cancellation/refund rules, payout trigger and sponsored-placement pricing remain pending. All financial activation remains subject to legal/accounting and PSP review.
 
 The PSP integration must be selected only after validating real multi-receiver split support, KYC/OAuth, partial refund, chargeback, settlement and reporting for Brazil. Do not treat a 1:1 split product as proof of 1:N availability.
+
+
+## COM-02 policy addition — 2026-11-18
+
+- Added `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`, version 1.0, jointly approved as an internal business rule by Keven and Rafael.
+- Recorded seller-funded, platform-funded and co-funded discounts by their real economic funding source and verified supplier compensation; added per-suborder/per-line allocation and audit requirements.
+- Confirmed that PSP costs remain separate under COM-03, taxes are not automatically excluded, and production remains blocked pending specialist review and PSP sandbox validation.
