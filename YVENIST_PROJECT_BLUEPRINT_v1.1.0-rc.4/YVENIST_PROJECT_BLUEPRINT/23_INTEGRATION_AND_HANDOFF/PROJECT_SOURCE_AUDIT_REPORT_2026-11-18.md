@@ -179,3 +179,23 @@ No edit, restore, publish, rename, move or delete was performed on the Figma fil
 ## 6. Evidence limitations
 
 The GitHub integration provided remote read access, not a local Git clone. The Figma integration provided current-file metadata and selected design structure, not version history. The CI run predates this audit and is not proof that the current local project or future documentation changes pass. No target application repository or original Figma asset was modified.
+
+
+## 7. Joint owner clarification received after the source read — 2026-11-18
+
+The owners supplied a joint clarification after the current Figma structure was read. This is a later human decision source and supersedes the earlier open statuses in sections 3.2–3.4:
+
+- New primary brand color: #FF5637, superseding the earlier #FF6B00 decision.
+- Hybrid three-screen direction: approved; Plus Jakarta Sans confirmed; current Material Icons mapping approved but revisable.
+- App icon: create new explorations; none of the previously inspected concepts is selected.
+- Foundation token set: accepted as baseline, with iterative refinement expected.
+- Rating in listing cards: customer rating.
+- Motion/performance evaluation: intended to be a design approval gate; recommended reference device is Samsung Galaxy A17 5G, 4 GB / 128 GB, Brazil SKU.
+- Layer 11 / item 3 confirmation semantics: V1 is paid immediate-order confirmation; V2 is Party Maker quote/request submission confirmation.
+- Party Maker, pricing, supplier confirmation, payment/contracting and immediate cart decisions are recorded in `00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_DECISION_RECORD_2026-11-18.md`.
+
+A fresh read of the live Direction page after the owner response still surfaced historical design labels and color examples using #FF6B00 and the old “Confirmação: orçamento solicitado” context. Do not mistake that for a newer owner approval. These are now reconciliation tasks. No Figma node was edited in this documentation update.
+
+The owners explicitly require that any changes they make during the ongoing design flow be preserved. Therefore, before updating Figma, re-read the current live file, capture the current node IDs/state, and perform a non-destructive reconciliation. Do not restore an old version or overwrite interim owner edits.
+
+The owner response does not verify the Figma version-history list. It remains pending. Local Git working-tree state, repo path, actual Claude terminal versions and two-session behavior also remain unverified.
