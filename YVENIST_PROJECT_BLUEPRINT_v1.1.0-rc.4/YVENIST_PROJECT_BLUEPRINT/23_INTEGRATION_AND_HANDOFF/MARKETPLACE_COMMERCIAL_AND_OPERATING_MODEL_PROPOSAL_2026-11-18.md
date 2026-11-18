@@ -1,4 +1,4 @@
-# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.3
+# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.4
 
 **Data:** 2026-11-18  
 **Status:** PROPOSTA ESTRUTURADA / AGUARDANDO APROVAÇÃO CONJUNTA E REVISÃO ESPECIALIZADA  
@@ -377,3 +377,12 @@ Fontes consultadas em 2026-11-18. Conteúdo de terceiros é referência de mecan
 ## 10. Programa de lançamento e comissão progressiva
 
 A proposta comercial específica para COM-01 está detalhada em `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. O programa busca reduzir a barreira de entrada para fornecedores iniciais sem comprometer a sustentabilidade futura: taxa de fundador de 3%, expansão a 5% e taxa-alvo de 10% em maturidade. A progressão exige métricas, aviso prévio e aceite contratual; não é automática por tempo. A proposta ainda aguarda aprovação conjunta de Keven e Rafael e revisão jurídica/contábil.
+
+
+## 10. Programa de Parceiros Fundadores e mercado de lançamento
+
+- Primeira área: Campo Grande / Zona Oeste do Rio, com núcleo de aquisição em Campo Grande e cobertura por área efetivamente atendida.
+- Meta: 20 fornecedores fundadores ativos e distintos, distribuídos em quatro famílias com cinco fornecedores cada: espaços/salões; buffet/alimentação; decoração/locação; confeitaria/doces/kits.
+- Atrações/entretenimento, foto/vídeo, papelaria, som/iluminação e demais categorias podem entrar em ondas posteriores após densidade e suporte.
+- A comissão 3% / 5% / 10%, prazo fundador de 12 meses desde a primeira venda concluída, gates e aviso de 60 dias estão aprovados conjuntamente como regra de negócio; ativação financeira continua dependendo de COM-02/COM-03 e revisão especializada.
+- Plano operacional e referências: `LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md`.
