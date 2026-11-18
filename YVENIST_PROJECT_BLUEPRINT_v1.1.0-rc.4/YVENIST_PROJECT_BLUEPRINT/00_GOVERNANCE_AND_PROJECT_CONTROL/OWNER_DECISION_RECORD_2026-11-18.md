@@ -126,3 +126,17 @@ Documentos normativos:
 - `23_INTEGRATION_AND_HANDOFF/LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md`
 
 Estas definições aprovam a política de negócio como regra de trabalho. A execução financeira real segue bloqueada até COM-02, COM-03, contrato jurídico, análise contábil e integração/homologação com PSP.
+
+
+## 12. COM-02 — base comissionável e tratamento de descontos (2026-11-18)
+
+Keven e Rafael aprovaram conjuntamente a COM-02 v1.0 como regra comercial interna do Yvenist, com os seguintes princípios:
+
+- A base é apurada por fornecedor/subpedido e pela parcela efetivamente concluída, a partir da remuneração que o fornecedor tem direito a receber antes da comissão Yvenist e dos custos do PSP.
+- Desconto economicamente suportado pelo fornecedor reduz a base. Desconto financiado pelo Yvenist/plataforma ou parceiro só preserva a remuneração na parcela efetivamente compensada ao fornecedor. Em promoção cofinanciada, cada parcela deve ser registrada; não presumir proporção fixa.
+- O nome/etiqueta da campanha não basta para classificar o desconto: conferir a obrigação contratual e a liquidação/compensação ao fornecedor.
+- Serviços e adicionais próprios do fornecedor (incluindo entrega, montagem e deslocamento quando contratados) integram sua remuneração. Repasse a terceiro independente só fica fora quando separado, comprovado, sem margem e descrito no contrato.
+- Taxa PSP é separada e permanece na COM-03. Tributos não são excluídos automaticamente; sua classificação exige revisão contábil/jurídica. Detalhes de reembolso parcial permanecem em COM-04.
+- A aprovação é comercial e interna; não libera cobrança em produção. São obrigatórias revisão especializada, contrato, conciliação e homologação do PSP.
+
+Documento normativo: `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`. Referências de pesquisa: TikTok Shop Brasil (campanhas cofinanciadas), Mercado Livre Developers (promoções e cupons do vendedor) e Amazon Seller Central Brasil (descontos financiados pela plataforma e referral fees em promoções), listadas na política COM-02.
