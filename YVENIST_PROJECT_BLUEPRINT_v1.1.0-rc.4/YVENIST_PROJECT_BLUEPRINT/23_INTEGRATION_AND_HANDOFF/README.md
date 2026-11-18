@@ -37,3 +37,10 @@ Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, 
 - `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` — expanded commercial model and operating rules proposal v0.2.
 - `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — order, contract, payment, commission, payout, refund and dispute lifecycle.
 - `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — joint decisions still required before production policy.
+
+
+## Local launch and approved COM-01 working policy
+
+- `LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md` — 20 active founding suppliers, four priority category families and Campo Grande / Zona Oeste phased coverage.
+- `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md` — COM-01 v0.2, 3% / 5% / 10% progressive commission, 12-month founding period, objective gates, 60-day advance notice and explicit supplier acceptance.
+- `COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — COM-01 jointly approved; other commercial and transaction parameters remain open.
