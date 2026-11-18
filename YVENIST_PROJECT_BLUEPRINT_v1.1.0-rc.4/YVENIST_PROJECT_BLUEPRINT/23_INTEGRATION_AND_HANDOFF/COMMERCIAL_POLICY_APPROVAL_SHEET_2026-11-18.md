@@ -1,30 +1,31 @@
 # FOLHA DE APROVAÇÃO — POLÍTICAS COMERCIAIS E DE CONTRATAÇÃO
 
 **Data:** 2026-11-18  
-**Status:** AGUARDANDO APROVAÇÃO CONJUNTA  
+**Status:** COM-01 E COM-02 APROVADAS CONJUNTAMENTE / DEMAIS ITENS PENDENTES  
 **Aprovadores:** Keven e Rafael  
 **Documentos-base:**  
 - `MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md`
 - `ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md`
+- `COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`
 
-Esta folha contém somente decisões que ainda precisam dos dois responsáveis. As recomendações do ChatGPT são propostas de trabalho e não substituem a aprovação de Keven e Rafael. Vocês podem aprovar uma recomendação, alterá-la ou deixar um item pendente.
+Esta folha registra decisões comerciais já aprovadas conjuntamente e itens que ainda precisam de deliberação. Recomendações técnicas e de pesquisa não substituem a aprovação de Keven e Rafael. Cada item conserva seu próprio status.
 
 ## A. Comissão e receita
 
 | ID | Decisão necessária | Recomendação para começar | Resposta dos responsáveis |
 |---|---|---|---|
 | COM-01 | Comissão progressiva e programa de lançamento | 3% para Parceiro Fundador nos primeiros 12 meses a partir da primeira contratação concluída; 5% após prazo + gate de expansão por categoria/área; 10% após gate de maturidade. Comissão paga pelo fornecedor por subpedido concluído; aviso de 60 dias e aceite expresso para nova taxa | APROVADO CONJUNTAMENTE — 2026-11-18 |
-| COM-02 | Base comissionável | Valor das linhas concluídas após descontos financiados pelo fornecedor; frete, tributos, montagem/deslocamento e terceiros discriminados para análise contábil | PENDENTE |
+| COM-02 | Base comissionável e descontos | Remuneração do fornecedor pela parte concluída, antes da comissão Yvenist e da taxa PSP; descontos reduzem a base conforme a parcela economicamente suportada pelo fornecedor; subsídio da plataforma só preserva a base quando efetivamente compensa o fornecedor; repasses genuínos e documentados de terceiros ficam separados | APROVADO CONJUNTAMENTE — 2026-11-18 |
 | COM-03 | Taxa do PSP | Deduzir do repasse do fornecedor, separada da comissão e claramente exibida, se a viabilidade econômica e o contrato permitirem | PENDENTE |
 | COM-04 | Comissão em reembolso parcial | Recalcular e reverter proporcionalmente à parcela reembolsada/não concluída | PENDENTE |
 | ADS-01 | Exposição patrocinada | Poucas posições por categoria/região, etiqueta Patrocinado, elegibilidade e relevância antes do pagamento | PENDENTE |
 | SUB-01 | Assinatura do consumidor | Fora do lançamento; definir benefícios, preço e prioridade apenas após acordo com fornecedores | PENDENTE / FUTURO |
 
-### COM-01 — proposta detalhada para deliberação conjunta
+### COM-01 — regra aprovada
 
-A proposta submetida por Keven é um modelo híbrido de entrada e maturidade: **3% na fase de lançamento para Parceiros Fundadores; 5% na fase de expansão; 10% como taxa-alvo na operação madura**. A cobrança é do fornecedor, por subpedido concluído. Não há aprovação final até Rafael confirmar a mesma versão.
+A política COM-01 v0.2 foi aprovada conjuntamente: 3% para Parceiros Fundadores nos primeiros 12 meses desde a primeira contratação concluída; 5% somente após o prazo mínimo e o gate de Expansão por categoria/área; 10% somente após gate de Maturidade e revisão conjunta. A cobrança é do fornecedor, por subpedido concluído. Aviso de 60 dias, lembretes em 30 e 7 dias, aceite expresso e não retroatividade são obrigatórios.
 
-Documento normativo proposto: `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. Ele define elegibilidade, benefícios não financeiros, coorte, prazo, transição, comunicação, métricas e salvaguardas. Os critérios quantitativos de expansão e maturidade continuam deliberadamente sujeitos à validação dos dois sócios, para não criar gatilhos automáticos sem dados do piloto.
+Documento normativo: `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`.
 
 ### COM-01 — registro das decisões conjuntas
 
@@ -41,7 +42,13 @@ O detalhamento, métricas, critérios de amostra e regras de implementação est
 - `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`;
 - `LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md`.
 
-COM-02, COM-03 e demais regras de pagamento, cancelamento e contratação continuam pendentes. A aprovação de COM-01 não libera cobranças reais antes de parecer jurídico/contábil e homologação do PSP.
+COM-02 também foi aprovada conjuntamente como regra comercial interna. Permanecem pendentes COM-03, COM-04 e outras regras de pagamento, cancelamento e contratação. As aprovações de COM-01 e COM-02 não liberam cobranças reais antes de parecer jurídico/contábil e homologação do PSP.
+
+### COM-02 — regra aprovada
+
+Keven e Rafael aprovaram conjuntamente a COM-02 v1.0. A base é calculada por fornecedor/subpedido e parte concluída, sobre a remuneração efetiva devida ao fornecedor antes da comissão Yvenist e dos custos PSP. Desconto financiado pelo fornecedor reduz a remuneração; parcela financiada pela plataforma só deixa de reduzir a base quando for efetivamente compensada ao fornecedor; promoções cofinanciadas são separadas por parcela. Entrega/montagem/deslocamento do próprio fornecedor integram sua remuneração quando contratados; repasses a terceiros só ficam fora com discriminação e comprovação. Tributos não são automaticamente excluídos. COM-03 (taxa PSP) e COM-04 (tratamento detalhado de reembolso parcial) permanecem pendentes.
+
+Documento normativo: `COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`.
 
 ## B. Confirmação, contratação e pagamento
 
