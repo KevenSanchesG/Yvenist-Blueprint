@@ -55,3 +55,15 @@
 5. Run ZIP integrity and duplicate-path checks after packaging.
 6. Preserve local environment and Figma version-history limitations as explicit open evidence.
 7. Obtain human approval for commercial/operating policy; these documents are proposals only.
+
+
+## Commercial and transaction specification update — 2026-11-18
+
+The following documents are now in main:
+- `23_INTEGRATION_AND_HANDOFF/MARKETPLACE_COMMERCIAL_AND_OPERATING_MODEL_PROPOSAL_2026-11-18.md` — expanded proposal v0.2.
+- `23_INTEGRATION_AND_HANDOFF/ORDER_CONTRACT_PAYMENT_STATE_MACHINE_2026-11-18.md` — proposed technical/domain state machine.
+- `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` — decisions requiring both owners.
+
+These are specifications and recommendations. The commission rate, commissionable base, PSP fee allocation, event payment schedule, temporary supplier hold, deadlines, final cancellation rules, payout trigger and sponsored-placement pricing are not approved yet.
+
+The PSP integration must be selected only after validating real multi-receiver split support, KYC/OAuth, partial refund, chargeback, settlement and reporting for Brazil. Do not treat a 1:1 split product as proof of 1:N availability.
