@@ -1,56 +1,84 @@
 # YVENIST — Current State Baseline
 
-**Status:** `UNVERIFIED` até a auditoria do repositório e das fontes do projeto.  
-**Última auditoria:** `NOT_PERFORMED`  
-**Responsável pela atualização:** a definir.
+**Snapshot date:** 2026-11-18  
+**Status:** PARTIAL_REMOTE_AND_FIGMA_STRUCTURE_SNAPSHOT / LOCAL_GIT_AND_FIGMA_HISTORY_UNVERIFIED  
+**Evidence report:** `23_INTEGRATION_AND_HANDOFF/PROJECT_SOURCE_AUDIT_REPORT_2026-11-18.md`  
+**GitHub snapshot:** `main` at `3abfa925cbdcd9aba0f7685bcfb6ee0aecf5baa3`  
+**Figma file:** `Yvenist_v0`, key `G2QX9NnDe8gJOnTrFUw1jH`
 
-Este documento é reservado ao estado factual observado da Yvenist em uma data específica. Não preencher com expectativas, roadmap ou suposições. Uma informação sem evidência permanece `UNVERIFIED`.
+This is a dated factual snapshot. It is not a roadmap, business approval or statement of production readiness. Remote and local repository evidence must remain distinct.
 
-## 1. Repositórios e código
+## 1. Repositories and code
 
-| Item | Estado observado | Evidência/caminho | Data de verificação |
+| Item | Observed state | Evidence | Date |
 |---|---|---|---|
-| Repositório GitHub | `UNVERIFIED` | A preencher na auditoria | — |
-| Cópia local principal | `UNVERIFIED` | A preencher na auditoria | — |
-| Branch e estado de trabalho | `UNVERIFIED` | A preencher na auditoria | — |
-| Aplicativos Flutter | `UNVERIFIED` | A preencher na auditoria | — |
-| Backend e APIs | `UNVERIFIED` | A preencher na auditoria | — |
-| Testes e automação | `UNVERIFIED` | A preencher na auditoria | — |
+| Declared remote repository | Read access succeeded through connected GitHub integration | `KevenSanchesG/Yvenist`, `main` | 2026-11-18 |
+| Remote HEAD | `3abfa925cbdcd9aba0f7685bcfb6ee0aecf5baa3` | GitHub ref API | 2026-11-18 |
+| Commit date | 2026-10-03T19:51:10Z | GitHub commit metadata | 2026-11-18 |
+| Recursive tree | 792 entries, not truncated | GitHub recursive tree | 2026-11-18 |
+| Flutter application | Present in `lib/` | Repository tree and root docs | 2026-11-18 |
+| Backend | Present in `backend/`; root docs identify FastAPI, SQLAlchemy, Alembic and PostgreSQL | Repository tree and README | 2026-11-18 |
+| Project Knowledge Base | Present in `docs/` | Repository tree and target `CLAUDE.md` | 2026-11-18 |
+| Local project clone | UNVERIFIED | No local filesystem/terminal inspection | — |
+| Local branch, remotes and working tree | UNVERIFIED | No local `git status` or remotes inspection | — |
 
-## 2. Design e marca
+## 2. Product capabilities documented at inspected commit
 
-| Item | Estado observado | Evidência/caminho | Data de verificação |
+The root README and Knowledge Base describe catalog/search, accounts, favorites, Party Maker event composition, category-specific item configuration, app-calculated estimate, supplier quote request/response/revision/history, supplier onboarding for venues, administrative review and light/dark themes.
+
+The same documentation marks payments, in-app chat, notifications, written reviews, event addresses, help center, listing photos, availability calendar, listing detail page, two-factor authentication and supplier onboarding beyond venues as unavailable or “Em breve” at that snapshot.
+
+This is a documentation-derived summary, not independent runtime verification. Recheck during local integration.
+
+## 3. Product decisions and unresolved questions
+
+ADR-019 and the Party Maker known-issues document mark PM-20 through PM-26 as awaiting owner confirmation. The vision document identifies monetization as an open question. No approval is inferred from the existing implementation or from Figma screen variants. See `OWNER_CONFIRMATION_REGISTER_2026-11-18.md`.
+
+## 4. CI evidence
+
+GitHub Actions run `37149780621` on `main` commit `3abfa925cbdcd9aba0f7685bcfb6ee0aecf5baa3` completed successfully on 2026-10-03. All five jobs — Flutter, Python/PostgreSQL backend, app/API/PostgreSQL integration, Android and Docker — reported success.
+
+This is historical evidence for that commit only. No tests, builds or CI runs were executed by the 2026-11-18 audit.
+
+Run: https://github.com/KevenSanchesG/Yvenist/actions/runs/37149780621
+
+## 5. Figma design baseline
+
+| Item | Observed state | Evidence | Date |
 |---|---|---|---|
-| Arquivo Figma principal | `UNVERIFIED` | A preencher na auditoria | — |
-| Bibliotecas e componentes | `UNVERIFIED` | A preencher na auditoria | — |
-| Tokens/variáveis | `UNVERIFIED` | A preencher na auditoria | — |
-| Ativos e guias de marca | `UNVERIFIED` | A preencher na auditoria | — |
+| File access | Current file opened read-only through Figma integration | File key `G2QX9NnDe8gJOnTrFUw1jH` | 2026-11-18 |
+| Top-level pages | Five: Base · Antigo; Direção; Fundações; Componentes; Telas · Cliente | `get_metadata` | 2026-11-18 |
+| Client screen section | Party Maker · começo; 126 first-level frame variants | Page `535:2` | 2026-11-18 |
+| Component library page | 81 top-level frame groups | Page `266:2` | 2026-11-18 |
+| Design foundations | Working tokens include #FAF7F4, #FFFFFF, #F3EEE9, #FFEDE0, #1E1A16, #5A5249, #716A60, #FF6B00 and #B34500 | Page `210:2` and variables | 2026-11-18 |
+| Figma comments | Empty list returned | `get_comments` | 2026-11-18 |
+| Subscribed libraries | None added to file | `get_libraries` | 2026-11-18 |
+| Version history | UNVERIFIED / NOT RETRIEVED | No version-history action exposed by the available connector in this session | — |
+| Approved design details | Mixed: decisions, proposals, inferences and items to confirm coexist on the Direção page | Exact sections described in source audit report | 2026-11-18 |
 
-## 3. Negócio e operação
+The Fundações page describes the token set as working values pending confirmation. The four icon concepts in section 15 are marked without approval. The three-screen hybrid in section 14 is labelled approved by Rafael and Keven, but some detailed elements remain inference/confirmation items. Use the owner confirmation register.
 
-| Item | Estado observado | Evidência/caminho | Data de verificação |
-|---|---|---|---|
-| Estrutura jurídica/societária | `UNVERIFIED` | Confirmar com responsáveis e documentos | — |
-| Fornecedores ativos | `UNVERIFIED` | A preencher na auditoria | — |
-| Categorias e regiões ativas | `UNVERIFIED` | A preencher na auditoria | — |
-| Pagamentos e repasses | `UNVERIFIED` | A preencher na auditoria | — |
-| Atendimento e processos internos | `UNVERIFIED` | A preencher na auditoria | — |
+## 6. Business and operations
 
-## 4. Claude Code e integrações
+Legal/corporate status, named approval authorities, active suppliers, active regions, pricing, monetization, commissions, payments, customer support and fulfillment operations are not established by this remote code/Figma structure audit. Keep them UNVERIFIED or UNASSIGNED until the appropriate humans and source documents confirm them.
 
-| Item | Estado observado | Evidência/caminho | Data de verificação |
-|---|---|---|---|
-| Versão do Claude Code | `UNVERIFIED` | A preencher na integração | — |
-| CLAUDE.md existente | `UNVERIFIED` | A preencher na auditoria | — |
-| .claude/ existente | `UNVERIFIED` | A preencher na auditoria | — |
-| Servidores MCP disponíveis | `UNVERIFIED` | A preencher na auditoria | — |
-| Credenciais e permissões | Não registrar segredos aqui | Inventariar apenas presença/gestor, sem valores | — |
+## 7. Claude Code and integrations
 
-## 5. Método de atualização
+| Item | Observed state | Evidence |
+|---|---|---|
+| Target repository `CLAUDE.md` | Present and read at remote commit | GitHub remote |
+| Target `.claude/` | Present | Repository tree |
+| Project rules | Seven area rules reported in the inspected tree | Repository tree |
+| Project Skill | `atualizar-memoria` exists | Repository tree and docs |
+| Installed Claude Desktop/Code version | UNVERIFIED | No access to development computer |
+| Owner's live two-session behavior | UNVERIFIED | Desktop pilot not performed |
+| Local MCP servers and permissions | UNVERIFIED | No local settings inspection |
 
-1. Registrar data, auditor e ambiente inspecionado.
-2. Anotar o caminho ou referência que prova cada afirmação.
-3. Separar observação direta, relato dos responsáveis e inferência.
-4. Não copiar tokens, senhas, chaves, dados pessoais desnecessários ou segredos comerciais para este documento.
-5. Atualizar o baseline por versão/data, preservando snapshots anteriores relevantes.
-6. Relacionar divergências e questões pendentes com os registros de governança.
+## 8. Update protocol
+
+1. Create a dated snapshot with exact source, commit/version and acquisition method.
+2. Record remote and local states separately.
+3. Cite the smallest path, commit or Figma version that proves each claim.
+4. Separate observation, repository documentation, human report and inference.
+5. Do not store credentials, tokens, private keys or unnecessary personal data.
+6. Preserve prior snapshots where history matters.
