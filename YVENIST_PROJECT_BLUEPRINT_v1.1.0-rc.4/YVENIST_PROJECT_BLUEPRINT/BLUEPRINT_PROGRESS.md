@@ -1,30 +1,35 @@
 # Blueprint Progress
 
-**Arquitetura-base:** `1.0.0` — `APPROVED_AS_WORKING_ARCHITECTURE`  
-**Addendum multi-sessão:** `0.3` — `PROPOSAL / READY_FOR_DESKTOP_PILOT`  
-**Release candidata atual:** `1.1.0-rc.4`
+**Architecture baseline:** 1.0.0 — APPROVED_AS_WORKING_ARCHITECTURE  
+**Imported source package:** 1.1.0-rc.4  
+**Working branch:** docs/phase-1-close-2026-11-18  
+**Phase 1:** CLOSED_WITH_SCOPED_PENDENCIES  
+**Multi-session addendum:** 0.3 — APPROVED_FOR_PILOT / OPERATIONAL_PILOT_PENDING  
+**Product Creation Framework:** 0.1 — PROPOSAL / HUMAN_REVIEW_REQUIRED
 
-## Concluído
+## Completed in Phase 1
 
-- Arquitetura-base 1.0.0 aprovada pelos responsáveis.
-- Fontes declaradas GitHub e Figma registradas; acesso autenticado ainda não auditado.
-- Protocolo multi-sessão 0.3 redigido para duas sessões Claude Code Desktop no mesmo computador.
-- Comunicação nativa cross-session validada documentalmente com a Anthropic; teste operacional na máquina dos responsáveis pendente.
-- Regras de versões mínimas registradas: Windows nativo Claude Code 2.1.234+; macOS/Linux/WSL 2 2.1.224+; @mention 2.1.232+.
-- Regra Worktree corrigida: controle deve ser ativado antes de iniciar cada sessão de escrita; padrão desativado.
-- Simulação Git em repositório temporário: worktrees isolados, commits independentes, integração não conflitante e detecção de conflito: `PASS`.
-- Testes estáticos anteriores do ZIP, estrutura, paths sem duplicação e JSON MCP example: `PASS`.
+- Architecture baseline 1.0.0 and decision BP-ARCH-001 remain approved.
+- Structural and governance inventory completed; progressive documentation and 24 numbered domain areas retained.
+- Read-only access to the private GitHub source verified through connected GitHub integration.
+- Target repository main inspected at 3abfa925cbdcd9aba0f7685bcfb6ee0aecf5baa3.
+- Partial target repository tree and Knowledge Base inspected; existing CLAUDE.md, rules, Skill, ADRs and project docs identified for preservation and mapping.
+- Historical CI run 37149780621 verified: all five jobs succeeded on the inspected 2026-10-03 commit.
+- Source authority policy clarified: code/tests/CI establish implementation facts; approved human decisions establish approved intent; conflicts are tracked, not silently overwritten.
+- Source register, acquisition protocol and current-state baseline updated with exact access limitations.
+- Multi-session addendum 0.3 approved for pilot; actual Desktop pilot remains pending.
+- PRODUCT_CREATION_FRAMEWORK.md v0.1 drafted as a proposal.
+- Phase 1 closure and source audit reports created.
 
-## Pendente
+## Scoped pending gates
 
-- Executar piloto real com duas sessões Claude Desktop Code na máquina do usuário.
-- Verificar versão Claude Desktop/Code e sistema operacional.
-- Confirmar descoberta, mensagens bidirecionais, comportamento de mensagens recebidas e fallback.
-- Confirmar Worktree ativado individualmente antes de cada sessão, paths/branches distintos e handoff real.
-- Validar acesso autenticado ao GitHub e auditar o repositório existente sem modificá-lo.
-- Validar acesso autorizado ao Figma, versão atual, páginas, frames e histórico; não editar o original durante a aquisição.
-- Escrever `PRODUCT_CREATION_FRAMEWORK.md` após o piloto ou decisão explícita de prosseguir com o protocolo como proposta.
+- Inspect local project folder, Git remotes, branch, HEAD and working-tree state on the development computer.
+- Read Figma file, establish access role, inventory pages/frames/components and capture current and selected historical version IDs.
+- Execute the real two-session Claude Desktop pilot: versions, same-environment reachability, messages, inbound behavior, Worktree isolation, commit and handoff.
+- Assign human RACI authorities and resolve product/business choices still marked awaiting owner confirmation.
+- Review and approve Product Creation Framework before treating it as mandatory process.
+- Build and validate a newly packaged release after review; this branch is not itself a published ZIP release.
 
-## Regra de progresso
+## Next phase
 
-A existência de um documento ou pasta não indica que a especificação está concluída. Marcar um item como concluído somente com conteúdo, evidência, revisão e status explícitos.
+Begin Phase 2 with company/business strategy and product portfolio definition under the Product Creation Framework proposal. Keep unresolved dependencies, hypotheses and approval gates explicit.
