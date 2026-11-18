@@ -5,12 +5,12 @@
 
 ## Finalidade
 
-Área de assets: illustrations. Guardar somente materiais com origem, licença, versão e contexto de uso registrados.
+Sistema de ilustrações 2D/3D da marca: linguagem de formas, perspectiva, materiais, contornos, sombras, composição e relação entre ilustrações e componentes funcionais. Figma será a fonte vetorial editável; Blender será usado seletivamente para ilustrações 3D.
 
-## Documentos previstos
+## Governação de assets
 
-- Consultar a árvore oficial em `BLUEPRINT_ARCHITECTURE.md`; documentos serão adicionados progressivamente.
-
-## Regra de criação
-
-Não criar documentos vazios. Antes de produzir um arquivo, definir finalidade, documento proprietário, fontes/entradas, responsável, dependências, status, critérios de aceite e documentos relacionados. Atualizar `BLUEPRINT_PROGRESS.md` e `BLUEPRINT_CHANGELOG.md` ao concluir mudanças relevantes.
+- Manter fonte editável e exportação de produção separadas.
+- Registrar origem, licença, autoria, versão, responsável, estado de aprovação e contexto de uso.
+- Definir versões clara/escura, escala, formato, fallback e uso em telas de entrada/estado vazio.
+- Somente exportações aprovadas devem ser adicionadas aos assets do app.
+- Seguir `23_INTEGRATION_AND_HANDOFF/VISUAL_ASSET_AND_MOTION_PIPELINE_2026-11-18.md`.
