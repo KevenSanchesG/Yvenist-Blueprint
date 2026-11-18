@@ -68,9 +68,9 @@ Referências oficiais:
 
 ### 3.1. Comissão por contratação
 
-**Proposta de comissão progressiva híbrida:** 3% para Parceiros Fundadores durante a fase de lançamento; 5% na fase de expansão; 10% como taxa-alvo de maturidade. A comissão é paga pelo fornecedor e calculada por subpedido sobre a base comissionável da parte efetivamente concluída.
+**Comissão progressiva aprovada — COM-01:** 3% para Parceiros Fundadores durante os primeiros 12 meses a partir da primeira contratação concluída; 5% na fase de expansão; 10% como taxa-alvo de maturidade. A comissão é paga pelo fornecedor e calculada por subpedido sobre a base comissionável da parte efetivamente concluída.
 
-A taxa de 3% é uma condição de aquisição de oferta para a coorte inicial, não uma promessa de taxa permanente nem uma taxa universal para todo fornecedor futuro. A progressão não deve ocorrer por calendário isolado. A passagem a 5% e depois a 10% depende de critérios de maturidade, comunicação antecipada, aceite contratual e decisão conjunta dos sócios. Até que os critérios sejam aprovados, nenhuma mudança automática de taxa deve ser ativada.
+A passagem a 5% depende do prazo mínimo individual, do gate de expansão da categoria/área, de aviso prévio de 60 dias e do aceite expresso do fornecedor. A passagem a 10% depende do gate de maturidade e de revisão/aprovação conjunta. Não há aumento automático por calendário, aplicação retroativa ou mudança de taxa em subpedido já aceito. Os thresholds internos e salvaguardas estão registrados em COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md.
 
 Exemplo ilustrativo para subpedido concluído de R$ 1.000,00: a 3%, comissão de R$ 30,00 e saldo de R$ 970,00; a 5%, R$ 50,00 e R$ 950,00; a 10%, R$ 100,00 e R$ 900,00. Valores antes de PSP, tributos, ajustes, reembolsos e custos atribuídos em contrato.
 
