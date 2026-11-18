@@ -1,4 +1,4 @@
-# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.2
+# MODELO COMERCIAL E OPERACIONAL DO MARKETPLACE — PROPOSTA v0.3
 
 **Data:** 2026-11-18  
 **Status:** PROPOSTA ESTRUTURADA / AGUARDANDO APROVAÇÃO CONJUNTA E REVISÃO ESPECIALIZADA  
@@ -51,16 +51,13 @@ O Yvenist pode aprender com transparência de taxas, regras específicas por tip
 
 ### 3.1. Comissão por contratação
 
-**Proposta para piloto controlado: 10% de comissão do fornecedor**, aplicada por subpedido sobre o valor comissionável da parte efetivamente concluída.
+**Proposta de comissão progressiva híbrida:** 3% para Parceiros Fundadores durante a fase de lançamento; 5% na fase de expansão; 10% como taxa-alvo de maturidade. A comissão é paga pelo fornecedor e calculada por subpedido sobre a base comissionável da parte efetivamente concluída.
 
-Esse número é uma hipótese de partida para teste, não um benchmark obrigatório nem aprovação comercial. A taxa única reduz complexidade inicial, facilita explicação ao fornecedor e permite medir conversão, retenção e margem antes de criar uma matriz de taxas.
+A taxa de 3% é uma condição de aquisição de oferta para a coorte inicial, não uma promessa de taxa permanente nem uma taxa universal para todo fornecedor futuro. A progressão não deve ocorrer por calendário isolado. A passagem a 5% e depois a 10% depende de critérios de maturidade, comunicação antecipada, aceite contratual e decisão conjunta dos sócios. Até que os critérios sejam aprovados, nenhuma mudança automática de taxa deve ser ativada.
 
-Exemplo meramente ilustrativo:
-- valor comissionável de um subpedido concluído: R$ 1.000,00;
-- comissão proposta de 10%: R$ 100,00;
-- saldo antes das taxas do PSP, tributos, ajustes e outros custos contratualmente atribuídos: R$ 900,00.
+Exemplo ilustrativo para subpedido concluído de R$ 1.000,00: a 3%, comissão de R$ 30,00 e saldo de R$ 970,00; a 5%, R$ 50,00 e R$ 950,00; a 10%, R$ 100,00 e R$ 900,00. Valores antes de PSP, tributos, ajustes, reembolsos e custos atribuídos em contrato.
 
-A comissão deve ser calculada por fornecedor. Um evento com quatro fornecedores terá quatro bases de cálculo e quatro apurações, não uma comissão indistinta sobre todo o evento.
+A comissão é apurada por fornecedor. Um evento com quatro fornecedores terá quatro bases e quatro apurações independentes, não uma comissão indistinta sobre todo o evento. A política detalhada está em `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`.
 
 ### 3.2. Base de cálculo recomendada
 
@@ -375,3 +372,8 @@ Não habilitar transações reais até que:
 ## 15. Fontes e limitações
 
 Fontes consultadas em 2026-11-18. Conteúdo de terceiros é referência de mecanismo, não aconselhamento jurídico, contábil ou autorização para operar serviço de pagamento. Taxas, APIs, elegibilidade e políticas comerciais podem mudar; revalidar diretamente com o PSP antes de escolher fornecedor ou implementar integração.
+
+
+## 10. Programa de lançamento e comissão progressiva
+
+A proposta comercial específica para COM-01 está detalhada em `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. O programa busca reduzir a barreira de entrada para fornecedores iniciais sem comprometer a sustentabilidade futura: taxa de fundador de 3%, expansão a 5% e taxa-alvo de 10% em maturidade. A progressão exige métricas, aviso prévio e aceite contratual; não é automática por tempo. A proposta ainda aguarda aprovação conjunta de Keven e Rafael e revisão jurídica/contábil.
