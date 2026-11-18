@@ -1,3 +1,14 @@
+## COM-02 — base comissionável e descontos aprovada conjuntamente (2026-11-18)
+
+- Keven e Rafael aprovaram a COM-02 v1.0 como regra comercial interna do Yvenist.
+- Definida a base por fornecedor/subpedido e parte concluída, vinculada à remuneração efetiva do fornecedor antes da comissão Yvenist e da taxa PSP.
+- Descontos suportados pelo fornecedor reduzem a base; subsídios da plataforma/parceiros só preservam a remuneração quando efetivamente compensados ao fornecedor; campanhas cofinanciadas registram cada contribuição.
+- Definida a separação de repasses comprovados a terceiros, inclusão de serviços próprios do fornecedor e ausência de exclusão automática de tributos.
+- Criado `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`; atualizados aprovação conjunta, proposta comercial v0.5, máquina de estados, registro dos sócios, progresso, manifesto e índice da área 23.
+- COM-03 (taxa PSP), COM-04 (reembolso parcial), revisão jurídica/contábil e homologação do PSP continuam pendentes; nenhuma cobrança em produção foi habilitada.
+
+---
+
 ## Local launch and COM-01 finalization — jointly approved working rules (2026-11-18)
 
 - Recorded joint owner agreement, as reported by Keven, to formalize COM-01 and the Campo Grande / Zona Oeste local launch strategy.
