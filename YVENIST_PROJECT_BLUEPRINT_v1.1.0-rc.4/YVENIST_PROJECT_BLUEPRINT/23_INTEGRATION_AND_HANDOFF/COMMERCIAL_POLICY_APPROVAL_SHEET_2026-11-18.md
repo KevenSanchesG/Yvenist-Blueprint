@@ -13,7 +13,7 @@ Esta folha contém somente decisões que ainda precisam dos dois responsáveis. 
 
 | ID | Decisão necessária | Recomendação para começar | Resposta dos responsáveis |
 |---|---|---|---|
-| COM-01 | Comissão progressiva e programa de lançamento | Modelo híbrido proposto: 3% para Parceiros Fundadores no lançamento; 5% na fase de expansão; 10% como taxa-alvo de maturidade. Comissão paga pelo fornecedor, somente sobre subpedido concluído. Critérios, duração, transição e elegibilidade sujeitos à aprovação conjunta | PROPOSTA DE KEVEN PARA APROVAÇÃO DE KEVEN + RAFAEL |
+| COM-01 | Comissão progressiva e programa de lançamento | 3% para Parceiro Fundador nos primeiros 12 meses a partir da primeira contratação concluída; 5% após prazo + gate de expansão por categoria/área; 10% após gate de maturidade. Comissão paga pelo fornecedor por subpedido concluído; aviso de 60 dias e aceite expresso para nova taxa | APROVADO CONJUNTAMENTE — 2026-11-18 |
 | COM-02 | Base comissionável | Valor das linhas concluídas após descontos financiados pelo fornecedor; frete, tributos, montagem/deslocamento e terceiros discriminados para análise contábil | PENDENTE |
 | COM-03 | Taxa do PSP | Deduzir do repasse do fornecedor, separada da comissão e claramente exibida, se a viabilidade econômica e o contrato permitirem | PENDENTE |
 | COM-04 | Comissão em reembolso parcial | Recalcular e reverter proporcionalmente à parcela reembolsada/não concluída | PENDENTE |
@@ -25,6 +25,23 @@ Esta folha contém somente decisões que ainda precisam dos dois responsáveis. 
 A proposta submetida por Keven é um modelo híbrido de entrada e maturidade: **3% na fase de lançamento para Parceiros Fundadores; 5% na fase de expansão; 10% como taxa-alvo na operação madura**. A cobrança é do fornecedor, por subpedido concluído. Não há aprovação final até Rafael confirmar a mesma versão.
 
 Documento normativo proposto: `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`. Ele define elegibilidade, benefícios não financeiros, coorte, prazo, transição, comunicação, métricas e salvaguardas. Os critérios quantitativos de expansão e maturidade continuam deliberadamente sujeitos à validação dos dois sócios, para não criar gatilhos automáticos sem dados do piloto.
+
+### COM-01 — registro das decisões conjuntas
+
+Os sócios confirmaram:
+- 20 fornecedores fundadores ativos e distintos;
+- quatro famílias prioritárias, meta de cinco fornecedores por família: espaços/salões; buffet/alimentação; decoração/locação; confeitaria/doces/kits;
+- região inicial Campo Grande / Zona Oeste, com Campo Grande como núcleo e cobertura progressiva conforme a área realmente atendida;
+- 3% por 12 meses desde a primeira contratação concluída do fornecedor fundador;
+- passagem para 5% apenas após prazo mínimo e gate de expansão por categoria/área;
+- passagem para 10% apenas após gate de maturidade e revisão conjunta;
+- comunicação prévia de 60 dias, lembretes em 30 e 7 dias, aceite expresso e nenhuma aplicação retroativa.
+
+O detalhamento, métricas, critérios de amostra e regras de implementação estão em:
+- `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`;
+- `LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md`.
+
+COM-02, COM-03 e demais regras de pagamento, cancelamento e contratação continuam pendentes. A aprovação de COM-01 não libera cobranças reais antes de parecer jurídico/contábil e homologação do PSP.
 
 ## B. Confirmação, contratação e pagamento
 
