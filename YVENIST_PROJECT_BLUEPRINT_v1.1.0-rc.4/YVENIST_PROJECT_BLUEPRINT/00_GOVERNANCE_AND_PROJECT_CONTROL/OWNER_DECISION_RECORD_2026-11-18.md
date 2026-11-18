@@ -105,3 +105,24 @@ No commercial fee or cancellation penalty is approved by this supplement. Both o
 ### COM-01 — proposta apresentada por Keven em 2026-11-18
 
 Keven solicitou levar para aprovação conjunta o modelo híbrido de comissão progressiva, com taxa de lançamento de 3%: 3% para Parceiros Fundadores na fase de lançamento, 5% na expansão e 10% como taxa-alvo de maturidade. A comissão seria paga pelo fornecedor e incidiria somente sobre subpedido concluído. Esta é uma proposta formalizada para deliberação, **não uma decisão conjunta aprovada**. Rafael ainda precisa aprovar a mesma estrutura ou propor alterações. Ver `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` e `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`.
+
+
+## 11. Lançamento local e COM-01 — deliberações conjuntas (2026-11-18)
+
+Keven informou que Rafael está de acordo com tudo que está sendo documentado. Os dois sócios confirmam as seguintes definições de trabalho:
+
+- Região inicial: Campo Grande / Zona Oeste do Rio de Janeiro; Campo Grande é o núcleo de aquisição e a cobertura é ampliada por bairro conforme fornecedores efetivamente atendem.
+- Meta de primeira coorte: 20 fornecedores fundadores ativos e distintos.
+- Composição da coorte: quatro famílias, meta de cinco fornecedores ativos por família — espaços/salões; buffet/alimentação; decoração/locação; confeitaria/doces/kits de festa.
+- Atrações/entretenimento, foto/vídeo, papelaria, som/iluminação e outras categorias serão habilitadas como onda posterior, sem impedir cadastro/listagem futura quando houver densidade e suporte.
+- Parceiro Fundador recebe comissão de 3% durante 12 meses a partir da primeira contratação concluída.
+- A migração para 5% exige simultaneamente o período individual de 12 meses, gate de Expansão por categoria/área, aviso prévio de 60 dias e aceite expresso. Se o gate não tiver sido cumprido, continua 3%.
+- A migração para 10% não é automática pelo calendário: depende do gate de Maturidade, revisão e aprovação conjunta.
+- Aviso de mudança: 60 dias, lembretes em 30 e 7 dias; sem aceite não se aplicam os novos termos a novas contratações e não há alteração retroativa.
+- Os thresholds e indicadores estão na política COM-01 v0.2. São metas internas do piloto, não benchmarks universais.
+
+Documentos normativos:
+- `23_INTEGRATION_AND_HANDOFF/COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`
+- `23_INTEGRATION_AND_HANDOFF/LOCAL_MARKET_LAUNCH_PLAN_CAMPO_GRANDE_ZONA_OESTE_2026-11-18.md`
+
+Estas definições aprovam a política de negócio como regra de trabalho. A execução financeira real segue bloqueada até COM-02, COM-03, contrato jurídico, análise contábil e integração/homologação com PSP.
