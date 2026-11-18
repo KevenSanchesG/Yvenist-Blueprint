@@ -101,3 +101,7 @@ On 2026-11-18, the owners asked to develop the commission model and the complete
 - The owner approval sheet is `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md`.
 
 No commercial fee or cancellation penalty is approved by this supplement. Both owners must approve the final terms, and specialist review is required before production charges.
+
+### COM-01 — proposta apresentada por Keven em 2026-11-18
+
+Keven solicitou levar para aprovação conjunta o modelo híbrido de comissão progressiva, com taxa de lançamento de 3%: 3% para Parceiros Fundadores na fase de lançamento, 5% na expansão e 10% como taxa-alvo de maturidade. A comissão seria paga pelo fornecedor e incidiria somente sobre subpedido concluído. Esta é uma proposta formalizada para deliberação, **não uma decisão conjunta aprovada**. Rafael ainda precisa aprovar a mesma estrutura ou propor alterações. Ver `23_INTEGRATION_AND_HANDOFF/COMMERCIAL_POLICY_APPROVAL_SHEET_2026-11-18.md` e `COMMISSION_POLICY_AND_FOUNDING_PARTNER_LAUNCH_2026-11-18.md`.
