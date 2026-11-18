@@ -2,7 +2,7 @@
 
 **Architecture baseline:** 1.0.0 — APPROVED_AS_WORKING_ARCHITECTURE  
 **Imported source package:** 1.1.0-rc.4  
-**Working branch:** docs/phase-1-close-2026-11-18  
+**Working branch:** main (preparation branch retained as history)  
 **Working delta status:** PHASE_1_CLOSED_WITH_SCOPED_PENDENCIES  
 **Product Creation Framework:** 0.1 — APPROVED_AS_OFFICIAL_WORKING_BASELINE  
 **Owner decisions:** joint response recorded 2026-11-18; detailed commercial and operational proposals remain unapproved.
@@ -11,12 +11,12 @@
 
 - Architecture baseline 1.0.0 is the approved governing structure.
 - Folder/package path YVENIST_PROJECT_BLUEPRINT_v1.1.0-rc.4 identifies the imported rc.4 source package.
-- Phase 1 closure, owner decision records and new proposals are unmerged branch changes, not a newly built or signed ZIP release.
+- Phase 1 closure, owner decision records and new proposals are committed on main. This does not mean a newly built or signed ZIP release exists.
 - Multi-session protocol 0.3 is approved for pilot; routine operational use still requires pilot evidence and acceptance.
 - Product Creation Framework v0.1 is approved by both owners as the official working basis.
 - Strategic and commercial decisions require both owners; technical/operational approval follows designated accountable owners.
 
-## New/updated deliverables in this branch
+## New/updated deliverables in main
 
 - 00_GOVERNANCE_AND_PROJECT_CONTROL/PRODUCT_CREATION_FRAMEWORK.md — now approved as the official working basis.
 - 00_GOVERNANCE_AND_PROJECT_CONTROL/OWNER_CONFIRMATION_REGISTER_2026-11-18.md — updated from open questions to the owners' response status and remaining follow-up work.
