@@ -44,7 +44,7 @@
 - Design the empty-event delete warning and recovery/undo behavior.
 - Turn the documented immediate-purchase cart/checkout into design and implementation slices.
 - Specify customer-rating eligibility, aggregation, moderation and verified-review rules.
-- Obtain joint approval for commercial parameters in the approval sheet: commission base/rate, PSP fee allocation, payment schedule, supplier hold/SLA, cancellation, completion and payout.
+- COM-01 (taxa progressiva) e COM-02 (base comissionável/descontos) aprovadas conjuntamente como regras comerciais internas em 2026-11-18; permanecem pendentes COM-03 (alocação da taxa PSP), COM-04 (reembolso parcial) e demais decisões de pagamento, SLA, cancelamento, conclusão e repasse.
 - Obtain legal/accounting/privacy/payment-provider review before live transactions.
 - Assign technical/operational RACI owners and qualified specialist reviewers.
 - Inspect local project folder, Git remotes, branch, HEAD and working-tree state on Rafael's computer.
@@ -53,7 +53,7 @@
 
 ## Next phase
 
-Continue Phase 2 by closing the joint commercial approval sheet, validating the payment provider and converting the transaction state model into prioritized implementation slices. Preserve the owners' ongoing Figma flow changes as live design input, and sequence MVP delivery into complete vertical slices without silently dropping approved scope.
+Continue Phase 2 by closing COM-03/COM-04 and the remaining transaction decisions, validating the payment provider and converting the approved commercial base plus transaction state model into prioritized implementation slices. Preserve the owners' ongoing Figma flow changes as live design input, and sequence MVP delivery into complete vertical slices without silently dropping approved scope.
 
 
 ## Commercial model and transaction lifecycle — active work
@@ -72,4 +72,15 @@ Continue Phase 2 by closing the joint commercial approval sheet, validating the 
 - Local pilot: Campo Grande / Zona Oeste, with Campo Grande as initial demand nucleus and geographic enablement based on actual provider service coverage.
 - First supply cohort target: 20 distinct active Founding Partners across four families, target five per family: venues, buffet/food, decoration/rental, confectionery/sweets/party kits.
 - Created local market launch plan and updated commission policy with measurement definitions, internal phase gates, supplier safeguards and Claude Code constraints.
-- Production collection remains blocked pending COM-02/COM-03, legal/accounting/PSP review and payment sandbox validation.
+- Production collection remains blocked pending COM-03/COM-04 and remaining transaction decisions, legal/accounting/PSP review and payment sandbox validation.
+
+
+## COM-02 — base comissionável e descontos (2026-11-18)
+
+- Keven e Rafael aprovaram conjuntamente a COM-02 v1.0 como regra comercial interna.
+- A comissão é calculada por fornecedor/subpedido sobre a remuneração efetivamente devida ao fornecedor pela parte concluída, antes da comissão Yvenist e da taxa PSP.
+- Descontos suportados pelo fornecedor reduzem a base; parcelas promocionais financiadas pela plataforma/parceiro só preservam a remuneração quando efetivamente compensadas ao fornecedor; campanhas cofinanciadas devem registrar as parcelas.
+- Repasse genuíno e documentado a terceiro independente fica separado; entrega, montagem e serviços próprios do fornecedor integram sua remuneração quando contratados.
+- Tributos não são excluídos automaticamente. A taxa PSP segue COM-03; detalhes de reembolso/cancelamento seguem COM-04.
+- Criado `23_INTEGRATION_AND_HANDOFF/COMMISSIONABLE_BASE_AND_DISCOUNT_POLICY_COM-02_2026-11-18.md`; proposta comercial v0.5, máquina de estados, folha de aprovação, registro dos sócios, changelog, README, progresso e manifesto atualizados.
+- Cobrança em produção continua bloqueada até revisão jurídica/contábil, definição COM-03/COM-04 e homologação do PSP.
